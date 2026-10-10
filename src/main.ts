@@ -40,14 +40,16 @@ function starTrail() {
 }
 function waves() { return '<span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>'; }
 function swatch(color: Color, index: number, kind: 'preview' | 'choice' | 'learn') {
+  // An isolated SVG image preserves the teaching color independently of page CSS.
+  const colorImage = `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><rect width="128" height="128" fill="${color.hex}"/></svg>`)}`;
   const active = selected === color.id;
   const isCorrect = kind === 'choice' && status === 'correct' && active;
   const isWrong = kind === 'choice' && status === 'wrong' && active;
   const isHint = kind === 'choice' && wrong >= 2 && color.id === target.id && status === 'ready';
-  const disabled = kind === 'choice' && (status !== 'ready' || paused);
+  const disabled = kind === 'choice' && (!canAnswer() || paused);
   const label = kind === 'choice' ? `${t().colorOption} ${number(index + 1)}` : name(color);
   return `<button class="swatch ${color.id === 'white' ? 'white-swatch' : ''} ${isCorrect ? 'is-correct' : ''} ${isWrong ? 'is-wrong' : ''} ${isHint ? 'is-hint' : ''} ${kind !== 'choice' && learned === color.id && status === 'speaking' ? 'is-speaking' : ''}" style="--swatch:${color.hex};--swatch-ink:${color.ink};--tilt:${[-5, 4, 3, -4][index % 4]}deg" data-action="${kind}" data-color="${color.id}" aria-label="${label}" ${disabled ? 'disabled' : ''}>
-    <span class="swatch-face">${isCorrect ? `<span class="answer-mark">${icon('check')}</span>` : isWrong ? `<span class="answer-mark">${icon('replay')}</span>` : kind === 'learn' ? icon('sound') : '<span class="swatch-shine"></span>'}</span>
+    <span class="swatch-face"><img class="swatch-color" src="${colorImage}" alt="" aria-hidden="true" draggable="false" width="128" height="128">${isCorrect ? `<span class="answer-mark">${icon('check')}</span>` : isWrong ? `<span class="answer-mark">${icon('replay')}</span>` : kind === 'learn' ? icon('sound') : '<span class="swatch-shine"></span>'}</span>
     ${kind === 'learn' ? `<span class="swatch-label">${name(color)}</span>` : ''}
     ${isCorrect ? '<span class="spark spark-a"></span><span class="spark spark-b"></span><span class="spark spark-c"></span>' : ''}
   </button>`;
@@ -125,20 +127,29 @@ async function feedback(kind: 'correct' | 'wrong' | 'finish', current: number) {
   if (current !== token) return;
   await sound.feedback(kind, settings.language);
 }
+function canAnswer() { return status === 'ready' || status === 'speaking'; }
 async function choose(id: string) {
-  if (page !== 'game' || status !== 'ready' || paused) return;
+  if (page !== 'game' || !canAnswer() || paused) return;
   cancel(); selected = id;
   const current = token;
   const correct = id === target.id;
   status = correct ? 'correct' : 'wrong';
   if (correct) completed++; else wrong++;
   render(); announce(correct ? `${t().correct} ${name(target)}` : t().wrong);
+  if (!correct) {
+    // Finish the wiggle, then accept another answer while encouragement plays.
+    // A new interaction cancels both the pending voice and any active audio.
+    void feedback('wrong', current);
+    await new Promise(resolve => setTimeout(resolve, 450));
+    if (current !== token) return;
+    status = 'ready'; selected = ''; render();
+    return;
+  }
   await Promise.all([
-    feedback(correct ? 'correct' : 'wrong', current),
-    new Promise(resolve => setTimeout(resolve, correct ? 1700 : 1100)),
+    feedback('correct', current),
+    new Promise(resolve => setTimeout(resolve, 1700)),
   ]);
   if (current !== token) return;
-  if (!correct) { status = 'ready'; selected = ''; render(); return; }
   if (completed === 5) {
     page = 'finish'; status = 'ready'; render(); focusHeading();
     void feedback('finish', current);
