@@ -1,198 +1,190 @@
 import './style.css';
-import { colors, shuffle, type Color } from './colors';
+import { shuffle } from './colors';
+import { subjects, type Item, type SubjectId } from './curriculum';
 import { Sound } from './audio';
 import { icon } from './icons';
 import { messages, type Language } from './i18n';
 
-function loadLanguage(): Language {
-  try {
-    const saved = localStorage.getItem('colorful-kids.language');
-    const legacy = JSON.parse(localStorage.getItem('colorful-kids.settings') ?? '{}');
-    return (saved ?? legacy.language) === 'en' ? 'en' : 'bn';
-  } catch { return 'bn'; }
-}
-const settings = { language: loadLanguage() };
 const app = document.querySelector<HTMLDivElement>('#app')!;
 const announcer = document.querySelector<HTMLDivElement>('#announcer')!;
 const sound = new Sound();
-let page: 'welcome' | 'game' | 'finish' | 'learn' = 'welcome';
-let status: 'ready' | 'speaking' | 'correct' | 'wrong' | 'error' = 'ready';
-let completed = 0;
-let wrong = 0;
-let selected = '';
-let target: Color = colors[0];
-let choices: Color[] = [];
-let deck: Color[] = [];
-let lastTarget = '';
+const read = <T>(key: string, fallback: T): T => { try { return JSON.parse(localStorage.getItem(key) ?? 'null') ?? fallback; } catch { return fallback; } };
+let language: Language = (() => { try { return localStorage.getItem('colorful-kids.language') === 'en' ? 'en' : 'bn'; } catch { return 'bn'; } })();
+const storedSeen = read<unknown>('colorful-kids.heard', {});
+let seen: Record<string, boolean> = storedSeen && typeof storedSeen === 'object' && !Array.isArray(storedSeen) ? storedSeen as Record<string, boolean> : {};
+let subjectId: SubjectId = 'colors';
+const asked: Partial<Record<SubjectId, Set<string>>> = {};
+let page: 'home' | 'learn' | 'game' | 'finish' = 'home';
+let phase: 'ready' | 'speaking' | 'wrong' | 'reveal' | 'correct' | 'error' = 'ready';
+let speaking = false;
+let activeId = '';
+let selectedId = '';
 let paused = false;
-let learned = '';
 let token = 0;
-const t = () => messages[settings.language];
-const number = (n: number) => new Intl.NumberFormat(settings.language === 'bn' ? 'bn-BD' : 'en-US').format(n);
-const name = (color: Color) => settings.language === 'bn' ? color.bn : color.en;
-const pool = () => colors;
-function persist() { try { localStorage.setItem('colorful-kids.language', settings.language); } catch { /* Storage is optional. */ } }
-function announce(text: string) { announcer.textContent = text; }
-function cancel() { token++; sound.stop(); }
-function logo() { return '<span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>'; }
-function starTrail() {
-  return `<div class="star-trail" aria-label="${t().progress}: ${number(completed)} / ${number(5)}">${Array.from({ length: 5 }, (_, i) => `<span class="star-slot ${i < completed ? 'earned' : ''}" aria-hidden="true">${icon('star')}</span>`).join('')}</div>`;
+let idleTimer: ReturnType<typeof setTimeout> | undefined;
+let queue: Item[] = [];
+let target: Item;
+let choices: Item[] = [];
+let results: { id: string; independent: boolean }[] = [];
+let errorContext: 'prompt' | 'reveal' | 'learn' = 'prompt';
+const t = () => messages[language];
+const subject = () => subjects.find(s => s.id === subjectId)!;
+const pool = () => subject().items(language);
+const number = (n: number) => n.toLocaleString(language === 'bn' ? 'bn-BD' : 'en-US');
+const title = () => subject().title[language];
+const delay = (ms: number) => new Promise<void>(resolve => setTimeout(resolve, ms));
+const escape = (text: string) => text.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
+function cancel() { announcer.textContent = ''; token++; clearTimeout(idleTimer); sound.stop(); speaking = false; }
+function persistSeen(item: Item) {
+  seen[`${subjectId}:${subjectId === 'colors' ? language : ''}:${item.id}`] = true;
+  try { localStorage.setItem('colorful-kids.heard', JSON.stringify(seen)); } catch { /* Optional local progress. */ }
 }
-function waves() { return '<span class="sound-bars" aria-hidden="true"><i></i><i></i><i></i><i></i></span>'; }
-function swatch(color: Color, index: number, kind: 'preview' | 'choice' | 'learn') {
-  // An isolated SVG image preserves the teaching color independently of page CSS.
-  const colorImage = `data:image/svg+xml,${encodeURIComponent(`<svg xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128"><rect width="128" height="128" fill="${color.hex}"/></svg>`)}`;
-  const active = selected === color.id;
-  const isCorrect = kind === 'choice' && status === 'correct' && active;
-  const isWrong = kind === 'choice' && status === 'wrong' && active;
-  const isHint = kind === 'choice' && wrong >= 2 && color.id === target.id && status === 'ready';
-  const disabled = kind === 'choice' && (!canAnswer() || paused);
-  const label = kind === 'choice' ? `${t().colorOption} ${number(index + 1)}` : name(color);
-  return `<button class="swatch ${color.id === 'white' ? 'white-swatch' : ''} ${isCorrect ? 'is-correct' : ''} ${isWrong ? 'is-wrong' : ''} ${isHint ? 'is-hint' : ''} ${kind !== 'choice' && learned === color.id && status === 'speaking' ? 'is-speaking' : ''}" style="--swatch:${color.hex};--swatch-ink:${color.ink};--tilt:${[-5, 4, 3, -4][index % 4]}deg" data-action="${kind}" data-color="${color.id}" aria-label="${label}" ${disabled ? 'disabled' : ''}>
-    <span class="swatch-face"><img class="swatch-color" src="${colorImage}" alt="" aria-hidden="true" draggable="false" width="128" height="128">${isCorrect ? `<span class="answer-mark">${icon('check')}</span>` : isWrong ? `<span class="answer-mark">${icon('replay')}</span>` : kind === 'learn' ? icon('sound') : '<span class="swatch-shine"></span>'}</span>
-    ${kind === 'learn' ? `<span class="swatch-label">${name(color)}</span>` : ''}
-    ${isCorrect ? '<span class="spark spark-a"></span><span class="spark spark-b"></span><span class="spark spark-c"></span>' : ''}
-  </button>`;
+function hasHeard(item: Item) { return !!seen[`${subjectId}:${subjectId === 'colors' ? language : ''}:${item.id}`]; }
+function logo() { return '<span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>'; }
+function glyph(item: Item) {
+  if (item.hex) {
+    const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><rect width="160" height="160" fill="${item.hex}"/></svg>`;
+    return `<img class="color-face ${item.id === 'white' ? 'white-face' : ''}" src="data:image/svg+xml,${encodeURIComponent(svg)}" width="160" height="160" alt="" draggable="false">`;
+  }
+  return `<span class="letter" lang="${subjectId}" dir="${subjectId === 'ar' ? 'rtl' : 'ltr'}">${escape(item.symbol)}</span>`;
 }
 function header() {
-  return `<header class="site-header"><button class="brand" data-action="home" aria-label="${t().home}">${logo()}<span><span class="brand-name" lang="en">Colorful Kids</span><small>${t().tagline}</small></span></button>
-    <div class="header-actions"><div class="language-switch" role="group" aria-label="${settings.language === 'bn' ? 'ভাষা' : 'Language'}"><button lang="bn" data-action="language" data-lang="bn" aria-pressed="${settings.language === 'bn'}">বাংলা</button><button lang="en" data-action="language" data-lang="en" aria-pressed="${settings.language === 'en'}">English</button></div></div>
-  </header>`;
+  return `<header class="site-header"><button class="brand" data-action="home" aria-label="${t().home}">${logo()}<span lang="en">Colorful Kids</span></button><div class="language-switch" role="group" aria-label="${t().language}">${(['bn','en'] as const).map(l => `<button lang="${l}" data-action="language" data-value="${l}" aria-pressed="${language === l}">${l === 'bn' ? 'বাংলা' : 'English'}</button>`).join('')}</div></header>`;
 }
-function welcome() {
-  return `<section class="welcome-board"><div class="welcome-copy"><h1>${t().welcome}<br><span>${t().welcomeAccent}</span></h1><p class="intro">${t().intro}</p><button class="primary start-button" data-action="start">${t().start}${icon('arrow')}</button><p class="sound-note">${icon('sound')}${t().soundOn}</p></div>
-    <div class="preview-area"><div class="preview-caption">${t().preview}${icon('arrow', 'caption-line')}</div><div class="preview-colors">${colors.slice(0, 4).map((c, i) => swatch(c, i, 'preview')).join('')}</div><p class="preview-hint">${status === 'error' ? t().error : status === 'speaking' && learned ? `${name(colors.find(c => c.id === learned)!)} ${t().speaking}` : t().previewHint}</p></div>
-    <span class="board-dot dot-a" aria-hidden="true"></span><span class="board-dot dot-b" aria-hidden="true"></span></section>
-    <div class="how-it-works" aria-label="${t().how}"><span>${icon('sound')}${t().step1}</span><span class="step-arrow" aria-hidden="true">${icon('arrow')}</span><span>${icon('hand')}${t().step2}</span><span class="step-arrow" aria-hidden="true">${icon('arrow')}</span><span>${icon('star')}${t().step3}</span></div><p class="session-note">${t().five}</p>`;
+function home() {
+  return `<section class="home"><h1>${t().pick}</h1><div class="subject-shelf">${subjects.map(s => `<button class="subject-door subject-${s.id}" data-action="subject" data-value="${s.id}"><span class="subject-art" aria-hidden="true">${s.id === 'colors' ? '<span class="color-stack"><i></i><i></i><i></i></span>' : `<span lang="${s.id}" dir="${s.id === 'ar' ? 'rtl' : 'ltr'}">${s.sample}</span>`}</span><span class="subject-title">${s.title[language]}${icon('arrow')}</span></button>`).join('')}</div></section>`;
 }
-function game() {
-  const feedback = status === 'correct' ? t().correct : status === 'wrong' ? t().wrong : status === 'error' ? t().error : status === 'speaking' ? t().speaking : wrong >= 2 ? t().hint : t().choose;
-  return `<section class="game-board"><div class="game-topline"><button class="text-button" data-action="home">${icon('back')}<span>${t().back}</span></button><span class="round-label">${t().round} ${number(status === 'correct' ? completed : Math.min(completed + 1, 5))} <span>/ ${number(5)}</span></span><button class="icon-button" data-action="pause" aria-label="${t().pause}">${icon('pause')}</button></div>
-    <div class="game-heading"><h1>${t().question}</h1><p>${t().prompt}</p></div>
-    <button class="listen-button ${status === 'speaking' ? 'playing' : ''}" data-action="replay" ${status === 'correct' || status === 'wrong' || paused ? 'disabled' : ''}>${status === 'speaking' ? waves() : icon('sound')}<span>${status === 'speaking' ? t().speaking : t().listen}</span></button>
-    <div class="choice-grid count-${choices.length}">${choices.map((c, i) => swatch(c, i, 'choice')).join('')}</div>
-    <div class="feedback ${status}" role="status">${status === 'correct' ? icon('star') : ''}<span>${feedback}${status === 'correct' ? ` <strong>— ${name(target)}</strong>` : ''}</span></div>
-    <div class="progress-area">${starTrail()}<span>${t().stars}</span></div>
-    ${paused ? `<div class="pause-overlay"><div>${icon('pause')}<h2>${t().paused}</h2><p>${t().pausedSub}</p><button class="primary" data-action="resume">${t().resume}${icon('play')}</button></div></div>` : ''}
-    </section>`;
+function navigation() {
+  return `<div class="activity-heading"><button class="icon-button" data-action="home" aria-label="${t().home}">${icon('back')}</button><h1>${title()}</h1><nav class="mode-tabs" aria-label="${title()}"><button data-action="learn" aria-current="${page === 'learn' ? 'page' : 'false'}">${icon('sound')}${t().learn}</button><button data-action="start" aria-current="${page !== 'learn' ? 'page' : 'false'}">${icon('play')}${t().play}</button></nav></div>`;
 }
-function finish() {
-  return `<section class="finish-board"><div class="celebration" aria-hidden="true">${[0, 1, 2, 3, 4].map(i => `<span style="--i:${i}">${icon('star')}</span>`).join('')}</div><h1>${t().finish}</h1><p>${t().finishSub}</p><button class="primary" data-action="start">${icon('replay')}${t().again}</button><button class="text-button" data-action="learn">${t().learn}${icon('arrow')}</button></section>`;
+function tile(item: Item, index: number, mode: 'learn' | 'choice') {
+  const teaching = mode === 'choice' && (phase === 'reveal' || (phase === 'error' && errorContext === 'reveal'));
+  const shown = teaching && item.id === target?.id;
+  const correct = phase === 'correct' && item.id === target?.id && mode === 'choice';
+  const wrong = phase === 'wrong' && item.id === selectedId && mode === 'choice';
+  const isSpeaking = speaking && activeId === item.id && mode === 'learn';
+  const disabled = mode === 'choice' && ((!['ready','speaking'].includes(phase) && !shown) || paused);
+  return `<button class="learning-tile ${item.hex ? 'color-tile' : 'letter-tile'} ${correct ? 'is-correct' : ''} ${shown ? 'is-revealed' : teaching ? 'is-muted' : ''} ${wrong ? 'is-wrong' : ''} ${isSpeaking ? 'is-speaking' : ''}" data-action="${mode === 'learn' ? 'hear' : shown ? 'replay' : 'choose'}" data-value="${item.id}" aria-label="${escape(mode === 'learn' || shown ? item.spoken : `${t().option} ${number(index + 1)}`)}" ${disabled ? 'disabled' : ''}><span class="tile-face">${glyph(item)}${correct || shown ? `<span class="answer-mark">${icon('check')}</span>` : wrong ? `<span class="answer-mark">${icon('sound')}</span>` : ''}</span>${mode === 'learn' ? `<span class="tile-label">${icon('sound')}${hasHeard(item) ? `<span class="heard" aria-label="${t().seen}">${icon('check')}</span>` : ''}</span>` : ''}</button>`;
 }
 function learn() {
-  return `<section class="learn-board"><h1>${t().learnTitle}</h1><p>${t().learnSub}</p><div class="learn-colors">${colors.map((c, i) => swatch(c, i, 'learn')).join('')}</div><div class="learn-status" role="status">${status === 'error' ? t().error : status === 'speaking' && learned ? `${name(colors.find(c => c.id === learned)!)}…` : t().previewHint}</div></section>`;
+  return `${navigation()}<section class="learning-board"><div class="learn-top"><p>${phase === 'error' ? t().error : t().touch}</p></div><div class="learning-grid ${subjectId === 'colors' ? 'all-colors' : ''}">${pool().map((item,i) => tile(item,i,'learn')).join('')}</div><div class="learn-bottom"><button class="primary" data-action="start">${t().start}${icon('play')}</button></div></section>`;
 }
-function render() {
-  const focus = document.activeElement as HTMLElement | null;
-  const action = focus?.dataset.action;
-  const color = focus?.dataset.color;
-  const lang = focus?.dataset.lang;
-  document.documentElement.lang = settings.language;
-  document.title = 'Colorful Kids';
-  app.innerHTML = `${header()}<main><nav class="mode-tabs" aria-label="${settings.language === 'bn' ? 'খেলার ধরন' : 'Activity'}"><button data-action="play-tab" aria-current="${page !== 'learn' ? 'page' : 'false'}">${icon('play')}${t().play}</button><button data-action="learn" aria-current="${page === 'learn' ? 'page' : 'false'}">${icon('star')}${t().learn}</button></nav>${page === 'welcome' ? welcome() : page === 'game' ? game() : page === 'finish' ? finish() : learn()}</main><footer>${icon('heart')}<span>${t().footer}</span><span class="footer-dots" aria-hidden="true"><i></i><i></i><i></i></span></footer>`;
-  if (action) {
-    const selector = `[data-action="${CSS.escape(action)}"]${color ? `[data-color="${CSS.escape(color)}"]` : ''}${lang ? `[data-lang="${lang}"]` : ''}`;
-    app.querySelector<HTMLElement>(selector)?.focus({ preventScroll: true });
-  }
+function replayButton() {
+  return `<button class="listen-button ${speaking ? 'playing' : ''}" data-action="replay" ${phase === 'wrong' || phase === 'correct' || paused ? 'disabled' : ''}>${icon('sound')}<span>${speaking ? t().listening : phase === 'error' ? t().retry : t().listen}</span></button>`;
 }
-function focusHeading() { const h = app.querySelector<HTMLElement>('h1'); if (h) { h.tabIndex = -1; h.focus({ preventScroll: true }); } }
-async function speak(color: Color) {
-  cancel();
-  const current = token;
-  status = 'speaking'; learned = color.id;
-  render();
-  const ok = await sound.play(color.id, settings.language);
+function progress() {
+  return `<div class="progress-track" aria-label="${t().progress}: ${number(results.length)} / ${number(5)}">${Array.from({length:5},(_,i) => `<span class="progress-slot ${results[i] ? results[i].independent ? 'earned' : 'assisted' : ''}">${icon(results[i] && !results[i].independent ? 'check' : 'star')}</span>`).join('')}</div>`;
+}
+function game() {
+  const reveal = phase === 'reveal' || (phase === 'error' && errorContext === 'reveal');
+  return `${navigation()}<section class="game-board"><div class="game-meta"><span>${t().round} ${number(Math.min(results.length + 1,5))} / ${number(5)}</span><button class="icon-button" data-action="pause" aria-label="${t().pause}">${icon('pause')}</button></div>${paused ? `<div class="paused-state"><h2>${t().paused}</h2><button class="primary" data-action="resume">${icon('play')}${t().resume}</button></div>` : `<h2>${reveal ? t().remember : subjectId === 'colors' ? t().findColor : t().findLetter}</h2>${replayButton()}<div class="choice-grid">${choices.map((item,i) => tile(item,i,'choice')).join('')}</div><div class="feedback" role="status">${phase === 'error' ? t().error : reveal ? '' : phase === 'correct' ? t().correct : phase === 'wrong' ? t().remember : ''}</div>${reveal ? `<button class="primary next-button" data-action="continue" ${speaking || phase === 'error' ? 'disabled' : ''}>${t().next}${icon('arrow')}</button>` : ''}${progress()}`}</section>`;
+}
+function finish() {
+  const independent = results.filter(r => r.independent).length;
+  return `${navigation()}<section class="finish-board"><div class="finish-star" aria-hidden="true">${icon('star')}</div><h2>${t().finish}</h2><div class="finish-results"><span>${icon('star')}<strong>${number(independent)}</strong>${t().independent}</span>${independent < 5 ? `<span>${icon('check')}<strong>${number(5-independent)}</strong>${t().together}</span>` : ''}</div><div class="finish-actions"><button class="primary" data-action="start">${icon('replay')}${t().again}</button><button class="text-button" data-action="learn">${t().more}${icon('arrow')}</button></div></section>`;
+}
+function render(focusTitle = false) {
+  const focused = document.activeElement as HTMLElement | null;
+  const action = focused?.dataset.action, value = focused?.dataset.value;
+  document.documentElement.lang = language;
+  app.innerHTML = `${header()}<main class="subject-${subjectId}">${page === 'home' ? home() : page === 'learn' ? learn() : page === 'game' ? game() : finish()}</main>`;
+  if (focusTitle) { const h = app.querySelector<HTMLElement>('h1'); if(h) {h.tabIndex=-1;h.focus({preventScroll:true});} }
+  else if (action) app.querySelector<HTMLElement>(`[data-action="${CSS.escape(action)}"]${value ? `[data-value="${CSS.escape(value)}"]` : ''}`)?.focus({preventScroll:true});
+}
+async function hear(item: Item) {
+  cancel(); const current = token; activeId = item.id; speaking = true; phase = 'speaking'; render();
+  const ok = await sound.playFile(item.audio);
   if (current !== token) return;
-  status = ok ? 'ready' : 'error';
-  render();
-  if (!ok) announce(t().error);
+  speaking = false; phase = ok ? 'ready' : 'error'; errorContext = 'learn';
+  if (ok) persistSeen(item); render();
+}
+function scheduleReplay() {
+  clearTimeout(idleTimer);
+  idleTimer = setTimeout(() => { if (page === 'game' && phase === 'ready' && !paused) void prompt(false); }, 9000);
+}
+async function prompt(remind = true) {
+  cancel(); const current = token; speaking = true; phase = 'speaking'; errorContext = 'prompt'; render();
+  const ok = await sound.playFile(target.audio);
+  if (current !== token) return;
+  speaking = false; phase = ok ? 'ready' : 'error'; render();
+  if (ok && remind) scheduleReplay();
 }
 function nextQuestion() {
-  announce('');
-  if (!deck.length) {
-    deck = shuffle(pool());
-    if (deck[0].id === lastTarget) deck.push(deck.shift()!);
-  }
-  target = deck.shift()!; lastTarget = target.id;
-  choices = shuffle([target, ...shuffle(pool().filter(c => c.id !== target.id)).slice(0, 3)]);
-  wrong = 0; selected = ''; paused = false;
-  void speak(target);
+  cancel(); announcer.textContent=''; selectedId='';paused=false;phase='ready';
+  if (!queue.length) { page='finish';render(true);sound.effect('finish');return; }
+  target=queue.shift()!;
+  (asked[subjectId] ??= new Set()).add(target.id);
+  choices=shuffle([target,...shuffle(pool().filter(e=>e.id!==target.id)).slice(0,3)]);
+  void prompt();
 }
 function start() {
-  cancel(); sound.unlock(); completed = 0; deck = []; lastTarget = ''; page = 'game'; nextQuestion(); focusHeading();
+  cancel();
+  const history = asked[subjectId] ??= new Set<string>();
+  const fresh = shuffle(pool().filter(item => !history.has(item.id)));
+  const remaining = shuffle(pool().filter(item => history.has(item.id)));
+  queue = [...fresh, ...remaining].slice(0, 5);
+  if (fresh.length < 5) history.clear();
+  results=[];page='game';window.scrollTo(0,0);nextQuestion();
 }
-async function feedback(kind: 'correct' | 'wrong' | 'finish', current: number) {
-  sound.effect(kind);
-  await new Promise(resolve => setTimeout(resolve, 650));
-  if (current !== token) return;
-  await sound.feedback(kind, settings.language);
+async function reveal() {
+  cancel();const current=token;phase='reveal';speaking=true;errorContext='reveal';render();
+  const ok=await sound.playFile(target.audio);
+  if(current!==token)return;
+  speaking=false;if(!ok)phase='error';render();
 }
-function canAnswer() { return status === 'ready' || status === 'speaking'; }
+function continueAfterTeaching() {
+  if (phase !== 'reveal' || speaking || paused) return;
+  results.push({id:target.id,independent:false});
+  nextQuestion();
+}
+function pause() { if(page!=='game'||paused)return;cancel();if(phase==='wrong'){phase='reveal';errorContext='reveal';}paused=true;render(); }
 async function choose(id: string) {
-  if (page !== 'game' || !canAnswer() || paused) return;
-  cancel(); selected = id;
-  const current = token;
-  const correct = id === target.id;
-  status = correct ? 'correct' : 'wrong';
-  if (correct) completed++; else wrong++;
-  render(); announce(correct ? `${t().correct} ${name(target)}` : t().wrong);
-  if (!correct) {
-    // Finish the wiggle, then accept another answer while encouragement plays.
-    // A new interaction cancels both the pending voice and any active audio.
-    void feedback('wrong', current);
-    await new Promise(resolve => setTimeout(resolve, 450));
-    if (current !== token) return;
-    status = 'ready'; selected = ''; render();
+  if(page!=='game'||paused||!['ready','speaking'].includes(phase))return;
+  cancel();const current=token;selectedId=id;
+  if(id!==target.id){
+    phase='wrong';render();sound.effect('wrong');
+    await delay(450);if(current!==token)return;
+    await reveal();
     return;
   }
-  await Promise.all([
-    feedback('correct', current),
-    new Promise(resolve => setTimeout(resolve, 1700)),
-  ]);
-  if (current !== token) return;
-  if (completed === 5) {
-    page = 'finish'; status = 'ready'; render(); focusHeading();
-    void feedback('finish', current);
-  } else nextQuestion();
+  phase='correct';speaking=true;render();sound.effect('correct');
+  results.push({id:target.id,independent:true});
+  announcer.textContent=`${t().correct} ${target.spoken}`;
+  await delay(600);if(current!==token)return;
+  await completeCorrect();
 }
-function pause() {
-  if (page !== 'game' || paused) return;
-  const wasCorrect = status === 'correct';
-  cancel(); paused = true; status = 'ready';
-  if (wasCorrect) {
-    if (completed === 5) { page = 'finish'; paused = false; }
-    else { if (!deck.length) deck = shuffle(pool()); target = deck.shift()!; lastTarget = target.id; choices = shuffle([target, ...shuffle(pool().filter(c => c.id !== target.id)).slice(0, 3)]); wrong = 0; }
-  }
-  render();
+async function completeCorrect() {
+  const current=token;speaking=true;phase='correct';render();
+  const ok=await sound.playFile(target.audio);if(current!==token)return;
+  if(!ok){results.pop();phase='error';speaking=false;errorContext='prompt';render();return;}
+  speaking=false;render();await delay(700);if(current!==token)return;
+  nextQuestion();
 }
-function changeLanguage(language: Language) {
-  if (language === settings.language) return;
-  const wasCorrect = page === 'game' && status === 'correct';
-  cancel(); settings.language = language; persist(); status = 'ready'; announce('');
-  if (wasCorrect) {
-    if (completed === 5) { page = 'finish'; render(); }
-    else nextQuestion();
-  } else if (page === 'game' && !paused) void speak(target);
-  else { render(); if (learned && (page === 'learn' || page === 'welcome')) void speak(colors.find(c => c.id === learned)!); }
-}
-app.addEventListener('click', event => {
-  const button = (event.target as HTMLElement).closest<HTMLButtonElement>('button[data-action]');
-  if (!button || button.disabled) return;
-  sound.unlock();
-  switch (button.dataset.action) {
-    case 'language': changeLanguage(button.dataset.lang as Language); break;
-    case 'start': start(); break;
-    case 'home': cancel(); page = 'welcome'; status = 'ready'; learned = ''; paused = false; render(); break;
-    case 'play-tab': if (page === 'learn') { cancel(); page = 'welcome'; status = 'ready'; learned = ''; render(); } break;
-    case 'learn': if (button.dataset.color) void speak(colors.find(c => c.id === button.dataset.color)!); else { cancel(); page = 'learn'; status = 'ready'; learned = ''; render(); focusHeading(); } break;
-    case 'preview': void speak(colors.find(c => c.id === button.dataset.color)!); break;
-    case 'choice': choose(button.dataset.color!); break;
-    case 'replay': void speak(target); break;
-    case 'pause': pause(); break;
-    case 'resume': paused = false; void speak(target); break;
+app.addEventListener('click',event=>{
+  const button=(event.target as HTMLElement).closest<HTMLButtonElement>('button[data-action]');
+  if(!button||button.disabled)return;
+  sound.unlock();const value=button.dataset.value!;
+  switch(button.dataset.action){
+    case 'home':cancel();page='home';phase='ready';paused=false;activeId='';render(true);break;
+    case 'subject':cancel();subjectId=value as SubjectId;page='learn';phase='ready';activeId='';render(true);break;
+    case 'learn':cancel();page='learn';phase='ready';activeId='';paused=false;render(true);break;
+    case 'hear':void hear(pool().find(e=>e.id===value)!);break;
+    case 'start':start();break;
+    case 'choose':void choose(value);break;
+    case 'continue':continueAfterTeaching();break;
+    case 'replay':if(phase==='reveal'||(phase==='error'&&errorContext==='reveal'))void reveal();else void prompt();break;
+    case 'pause':pause();break;
+    case 'resume':paused=false;if(phase==='reveal'||(phase==='error'&&errorContext==='reveal'))void reveal();else if(phase==='correct')void completeCorrect();else void prompt();break;
+    case 'language':{
+      if(value===language)break;cancel();language=value as Language;
+      try{localStorage.setItem('colorful-kids.language',language);}catch{}
+      activeId='';
+      if(page==='game'){
+        const items=subject().items(language);target=items.find(e=>e.id===target.id)!;choices=choices.map(c=>items.find(e=>e.id===c.id)!);queue=queue.map(c=>items.find(e=>e.id===c.id)!);
+        if(paused)render();else if(phase==='wrong'||phase==='reveal'||(phase==='error'&&errorContext==='reveal'))void reveal();else if(phase==='correct')void completeCorrect();else void prompt();
+      }else{phase='ready';render();}break;
+    }
   }
 });
-document.addEventListener('visibilitychange', () => {
-  if (document.hidden) { if (page === 'game') pause(); else { cancel(); status = 'ready'; render(); } }
-});
+document.addEventListener('visibilitychange',()=>{if(document.hidden){if(page==='game')pause();else{cancel();phase='ready';render();}}});
 render();

@@ -16,7 +16,7 @@ A four-year-old child, using Google Chrome on a laptop or mobile phone. The pare
 
 ## Product Purpose
 
-Teach recognition of colors through spoken Bengali and English names and selection of a matching color.
+Teach recognition of colors and Bengali, English and Arabic letters through listening, exploration and short recognition activities.
 
 ## Operating Context
 
@@ -47,10 +47,25 @@ Account-free local audio generation was subsequently demonstrated using Meta MMS
 
 ## Implemented Scope
 
-Ten colors, a five-round game, a separate explore-and-listen page, exactly four choices drawn from all ten colors, gentle wrong feedback, hints after two mistakes, star rewards, replay, pause, automatic OS reduced-motion support, always-on sound effects, and persistent language only. Local MP3 files live in `public/audio/bn/` and `public/audio/en/`. No accounts, cloud API calls, tracking, or runtime model downloads. The sticker-album visual direction is recorded in the surface brief. The user delegated completion; no standing build-path preference was inferred or saved.
+Ten colors, a five-round game, a separate explore-and-listen page, exactly four choices drawn from all ten colors, first-error teaching reveal, separate independent-star and assisted-check progress, replay, pause, automatic OS reduced-motion support, always-on sound effects, and persistent language only. Local MP3 files live in `public/audio/bn/` and `public/audio/en/`. No accounts, cloud API calls, tracking, or runtime model downloads. The sticker-album visual direction is recorded in the surface brief. The user delegated completion; no standing build-path preference was inferred or saved.
 
 ## Verification Limits
 
 Generated audio passes token/decoding/clipping checks; subjective pronunciation remains a listening-review item. Connected physical mobile devices must not be tested without permission. Browser viewport emulation is allowed. GitHub deployment itself is not performed by the local-only handoff.
 
 Brand stays “Colorful Kids” in both languages; no settings panel. The existing MMS speech was rejected for pronunciation quality. Replacement Google AI Studio Gero masculine color and feedback recordings are installed (26 clips); AUDIO-SCRIPT.md is the recording contract.
+
+## Expanded learning release
+
+The user requested a complete web learning foundation with colors and the three recorded alphabets, cleaner UI without decorative footer text, and correction that teaches rather than rewarding guesses. Keep the Colorful Kids name, one Bengali/English UI switch, always-on sound, four answer choices, all ten colors and existing forced-dark-mode protection. Alphabet voice stays in the subject language independent of UI language.
+
+105 alphabet clips use the same Gero voice. Arabic has 29 entries including hamza and the Bangladesh teaching order, with twelve qasr names without final hamza. Bengali ড় and ঢ় use their standalone sounds. Source assets and pronunciation review live in audio-source/alphabets; bundled copies include provenance. No new generation is required for this release.
+
+A subject opens exploration first. Alphabets are grouped into small sets; colors remain all ten. Local heard markers record audio playback, not mastery. Recognition is tracked separately from assisted completion. Mobile-store release is a future stage; current scope is responsive static web, with curriculum, presentation and playback kept separate.
+
+Final simplified correction decision: on the FIRST incorrect choice, show the correct item and speak its name; Next completes that question as assisted. No delayed retry queue within the session. A correct first answer earns recognition credit and repeats its name. Five questions always finish in five encounters.
+
+
+### বর্তমান শেখা ও খেলার নিয়ম
+
+আগের ছোট দলের নিয়মের পরিবর্তে শেখায় পুরো বর্ণমালা এক তালিকায় থাকে। খেলায় পুরো বিষয় থেকে পাঁচটি আলাদা প্রশ্ন আসে; একই পেজ খোলা থাকা অবস্থায় পরের পর্বে আগে না-আসা প্রশ্ন অগ্রাধিকার পায়। প্রথম ভুলে চারটি অপশন একই জায়গায় থাকে: সঠিকটি সামান্য বড়, বর্ডার ও চেকসহ দেখা যায়, বাকিগুলো ম্লান হয়। সঠিকটিতে ট্যাপ করলে নাম আবার শোনা যায়। নামের পরে Next চালু হয়। ফলাফলে নিরপেক্ষ সমাপ্তির লেখা, স্বাধীন ও সহায়তাপ্রাপ্ত উত্তর আলাদা; feedback শুধুই সাউন্ড ইফেক্ট।

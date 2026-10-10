@@ -1,0 +1,11 @@
+{
+  "clips": 105,
+  "decodeAndSignalFailures": [],
+  "expectedCounts": {
+    "bn": 50,
+    "en": 26,
+    "ar": 29
+  },
+  "pronunciationReview": "pending",
+  "latestCorrection": "12 qasr replacements decode successfully and have non-silent signal; pronunciation listening review pending"
+}

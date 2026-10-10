@@ -1,6 +1,6 @@
 ---
-name: "রঙের খেলা · Colorful Kids"
-description: "শিশুর রঙ চেনার জন্য শান্ত স্টিকার অ্যালবাম"
+name: "Colorful Kids"
+description: "রং ও তিন বর্ণমালার স্টিকার অ্যালবাম"
 colors:
   purple: "#7550ba"
   purple-dark: "#5e3b9f"
@@ -8,18 +8,19 @@ colors:
   muted: "#716581"
   paper: "#fffefa"
   ground: "#f4f0fb"
-  caption: "#796641"
+  soft: "#ece3f8"
   white: "#ffffff"
   language-track: "#e9e2f3"
-  tab-active: "#e5daf5"
-  listen: "#ece3f8"
   listen-hover: "#dfcff3"
-  focus: "#603aa5"
-  correct: "#24734b"
-  wrong: "#93641d"
-  error: "#9b3b45"
-  star-fill: "#f2ca56"
-  star-stroke: "#c59523"
+  green: "#24734b"
+  gold: "#f2ca56"
+  star-stroke: "#977315"
+  bn-paper: "#f8ebd9"
+  bn-ink: "#744721"
+  en-paper: "#e7effb"
+  en-ink: "#315a83"
+  ar-paper: "#e6f2ec"
+  ar-ink: "#245f4a"
   swatch-red: "#EC485A"
   swatch-blue: "#3783E6"
   swatch-yellow: "#F6C842"
@@ -33,170 +34,168 @@ colors:
 typography:
   display:
     fontFamily: "Baloo, Nunito, sans-serif"
-    fontSize: "clamp(44px, 4.5vw, 62px)"
+    fontSize: "clamp(32px, 4vw, 48px)"
     fontWeight: 800
-    lineHeight: 1.16
-    letterSpacing: "-0.025em"
-  display-en:
-    fontFamily: "Nunito, Baloo, sans-serif"
-    fontSize: "49px"
-    fontWeight: 800
-    lineHeight: 1.16
+    lineHeight: 1.2
     letterSpacing: "-0.025em"
   headline:
     fontFamily: "Baloo, Nunito, sans-serif"
-    fontSize: "36px"
+    fontSize: "32px"
     fontWeight: 800
-    lineHeight: 1.22
+    lineHeight: 1.2
   body:
     fontFamily: "Baloo, Nunito, sans-serif"
     fontSize: "19px"
-    lineHeight: 1.6
   label:
     fontFamily: "Baloo, Nunito, sans-serif"
-    fontSize: "17px"
-    fontWeight: 700
+    fontSize: "18px"
+    fontWeight: 600
 rounded:
   action: "16px"
   sheet: "32px"
   sheet-mobile: "25px"
-  dialog: "24px"
-  option: "12px"
-  sticker: "26%"
-  pill: "30px"
+  tile: "22%"
+  segment-track: "14px"
+  segment: "10px"
 spacing:
   small: "8px"
-  control: "15px"
-  medium: "24px"
-  large: "30px"
+  medium: "18px"
+  grid: "24px"
+  large: "28px"
 components:
   button-primary:
     backgroundColor: "{colors.purple}"
     textColor: "{colors.white}"
     rounded: "{rounded.action}"
-    padding: "13px 30px"
+    padding: "12px 28px"
   button-primary-hover:
     backgroundColor: "{colors.purple-dark}"
   button-listen:
-    backgroundColor: "{colors.listen}"
-    textColor: "#604094"
-    rounded: "28px"
-    padding: "10px 21px"
+    backgroundColor: "{colors.soft}"
+    textColor: "{colors.purple-dark}"
+    rounded: "{rounded.action}"
+    padding: "13px 26px"
   button-icon:
+    backgroundColor: "{colors.soft}"
+    textColor: "{colors.purple-dark}"
     rounded: "50%"
-    size: "44px"
+    size: "48px"
+  button-text:
+    textColor: "{colors.purple-dark}"
+    padding: "8px 16px"
   navigation:
-    backgroundColor: "{colors.tab-active}"
-    textColor: "#563589"
-    rounded: "{rounded.pill}"
-    padding: "11px 24px"
-  language:
     backgroundColor: "{colors.language-track}"
-    rounded: "14px"
+    rounded: "{rounded.segment-track}"
     padding: "4px"
-  sticker:
-    rounded: "{rounded.sticker}"
-  setting-option:
-    rounded: "{rounded.option}"
-  setting-toggle:
-    backgroundColor: "{colors.purple}"
-    width: "42px"
-    height: "25px"
-    rounded: "20px"
+  subject-door:
+    backgroundColor: "{colors.paper}"
+    rounded: "{rounded.action}"
+    padding: "20px 28px"
+  learning-tile:
+    backgroundColor: "{colors.soft}"
+    rounded: "{rounded.tile}"
   sheet:
     backgroundColor: "{colors.paper}"
     rounded: "{rounded.sheet}"
+    padding: "28px 36px 36px"
 ---
 
-# Design System: রঙের খেলা · Colorful Kids
+# Design System: Colorful Kids
 
 ## Overview
 
 **Creative North Star: "স্টিকার অ্যালবাম"**
 
-স্টিকার অ্যালবামের মতো উষ্ণ সাদা পাতায় রঙের টুকরোগুলো প্রধান বিষয়। শান্ত ল্যাভেন্ডার পটভূমি, গাঢ় বরইরঙা লেখা এবং বেগুনি নিয়ন্ত্রণ শিশুকে শোনা ও স্পর্শ করার দিকে রাখে।
+স্টিকার অ্যালবামের উষ্ণ সাদা পাতা, শান্ত ল্যাভেন্ডার পটভূমি, বরইরঙা লেখা এবং বেগুনি নিয়ন্ত্রণ বজায় থাকে। রঙের স্ব্যাচ ও বাংলা, ইংরেজি, আরবি অক্ষরই শিক্ষণীয় দৃশ্য; বড় স্পর্শযোগ্য tile শোনা এবং চেনার কাজ সামনে রাখে।
 
-বাংলা ও ইংরেজির জন্য নিজস্বভাবে রাখা Baloo Da 2 ও Nunito ব্যবহার হয়। রঙের স্টিকার, সামান্য কাত হওয়া ভঙ্গি এবং অর্জিত তারার মৃদু নড়াচড়া আনন্দ আনে; পৃষ্ঠাটি প্রশস্ত ও কম ঘন থাকে।
+স্বাগত পর্দা চারটি বিষয় বেছে নেওয়ার shelf। প্রতিটি বিষয় আগে শেখার tray খোলে, তারপর একই উপাদান দিয়ে সংক্ষিপ্ত খেলা। অলংকারমূলক বাড়তি লেখা ও footer নেই।
 
 **Key Characteristics:**
 
-- শান্ত কাগজের পটভূমিতে উজ্জ্বল শিক্ষণীয় রঙ।
-- গোলাকার অক্ষর, বড় স্পর্শযোগ্য স্টিকার।
-- একটি ভাষা নিয়ন্ত্রণে পুরো UI এবং শুধু নির্বাচিত ভাষার রঙের নামের অডিও।
-- সফলতায় স্টিকার ওঠে ও তারা জমে; ভুলে কোমল দুলুনি।
+- শান্ত কাগজে উজ্জ্বল রং ও বড় প্রকৃত অক্ষর।
+- বাংলা/English UI switch; বর্ণমালার উচ্চারণ নিজস্ব ভাষায়।
+- প্রথম ভুলেই সঠিক উদাহরণ; সরাসরি Next।
+- স্বাধীন উত্তরে তারা, সহায়তায় শেষ করলে check।
 
 ## Colors
 
-শান্ত বেগুনি পরিবেশের মধ্যে শেখার রঙগুলো উজ্জ্বল ও পরস্পর স্পষ্ট। উপরকার token মানগুলো normative; একবারের অলংকারের সব রঙ token করা হয়নি।
-
 ### Primary
 
-`purple` মূল action; `purple-dark` hover। `listen` এবং `tab-active` একই পরিবারের নরম ক্ষেত্র।
+`purple` মূল action, `purple-dark` hover ও নির্বাচিত নিয়ন্ত্রণের লেখা। `soft` replay ও icon button-এর নরম ক্ষেত্র।
 
 ### Secondary
 
-`swatch-*` শিক্ষণীয় বিষয়বস্তু; এগুলো action palette নয়। দশটি রঙের নাম ও মান `src/colors.ts` থেকে নেওয়া। সাদা স্টিকারে আলাদা inset border থাকে।
+দশটি `swatch-*` শেখার রং। বাংলা tile-এ উষ্ণ `bn-paper`/`bn-ink`, ইংরেজিতে নীল `en-paper`/`en-ink`, আরবিতে সবুজ `ar-paper`/`ar-ink` বিষয়গুলো আলাদা করে।
 
 ### Tertiary
 
-`star-fill` ও `star-stroke` অর্জন বোঝায়। `correct`, `wrong`, `error` feedback-এর লেখা রাঙায়; চিহ্ন ও ভাষাও একই অবস্থা জানায়।
+`gold` ও `star-stroke` স্বাধীন সাফল্যের তারা; `green` check, শোনা হয়েছে এবং সঠিক উত্তরের feedback। অবস্থা শুধু রং দিয়ে বোঝানো হয় না।
 
 ### Neutral
 
-`ground` বাইরের জায়গা, `paper` কাজের পাতা, `ink` প্রধান লেখা, `muted` সহায়ক লেখা, `caption` স্টিকারের পাশে নির্দেশ। সংশোধিত muted ও caption-ই বর্তমান মান।
+`ground` বাইরের জায়গা, `paper` board ও subject entrance, `ink` মূল লেখা, `muted` নির্দেশ ও সহায়ক লেখা।
 
-**The Color-as-Content Rule.** উজ্জ্বল রঙের বড় ক্ষেত্র শিক্ষণীয় স্টিকারে রাখুন; চারপাশ শান্ত থাকুক।
+**The Color-as-Content Rule.** উজ্জ্বল রঙের বড় ক্ষেত্র শিক্ষণীয় স্ব্যাচে রাখুন; চারপাশ শান্ত থাকুক।
 
 ## Typography
 
-বাংলার display/body font Baloo Da 2, CSS family alias `Baloo`; fallback Nunito, sans-serif। ইংরেজিতে Nunito আগে এবং Baloo fallback। উভয় font `/fonts/` থেকে self-hosted। বাংলা regular/bold/extra এবং ইংরেজি bold/extra font ফাইলের বিদ্যমান weight mapping বজায় রাখতে হবে; `font-synthesis:none` ব্যবহৃত।
+বাংলার Baloo Da 2 CSS-এ `Baloo`; ইংরেজি UI-তে Nunito আগে। উভয় font self-hosted এবং `font-synthesis:none`। Arabic learning glyph-এ Arial, sans-serif ব্যবহার হয়; এটি শেখার লিপি, display heading নয়। Brand সব ভাষায় Nunito-তে Colorful Kids।
 
-স্বাগত শিরোনাম display; খেলার শিরোনাম headline। সাধারণ intro-এর line-height 1.6; body-এর একক সর্বজনীন size নেই। ইংরেজি intro 17px, বাংলা 19px; খেলায় যথাক্রমে 15px ও 16px। ছোট নোট desktop-এ 12–14px। Mobile-এ স্বাগত শিরোনাম বাংলা 42px, ইংরেজি 36px; খেলার শিরোনাম 29px ও 26px। 360px-এর নিচে আরও ছোট হয়। শিরোনামে balanced wrapping ব্যবহার হয়।
+Home heading display, activity heading 30px, game heading headline। Tile label label-role; শেখার নির্দেশ body-role। সাধারণ body-র একক সর্বজনীন size নেই। অক্ষরের desktop size 50–76px, আরবিতে 64–88px; game choice-এ 84px ও 100px। 750px থেকে home heading 34px এবং activity 25px; 480px থেকে home 32px, game 27px। শিরোনামে balanced wrapping থাকে।
 
 ## Layout
 
-Header সর্বোচ্চ 1160px, main সর্বোচ্চ 1040px। Desktop main-এর দুই পাশে মোট 64px জায়গা থাকে। স্বাগত পাতায় 1.03fr/1fr দুই কলাম; padding 70px 62px 62px ও gap 35px। অন্য পাতাগুলো একই sheet ভাষা রাখলেও ভেতরের বিন্যাস কাজ অনুযায়ী বদলায়।
+Header সর্বোচ্চ 1160px; main সর্বোচ্চ 1040px এবং desktop-এ মোট 48px পাশের জায়গা। Subject shelf 1.1fr/1fr: রঙের entrance বাম পাশে তিন সারি জুড়ে, তিনটি alphabet entrance ডানে। সারি 130px, gap 18px। 750px থেকে shelf সমান দুই কলাম, gap 14px।
 
-850px-এ padding ও ফাঁক কমে। 600px-এ main-এর দুই পাশে 14px, স্বাগত এক কলামে আসে, লেখা কেন্দ্রে ও স্টিকার 2×2। তিনটি game choice-এর শেষটি দ্বিতীয় সারির কেন্দ্রে; চারটি choice 2×2। Explore desktop-এ পাঁচ ও mobile-এ দুই কলাম। 360px-এ game sticker 112px হয়। 1400px থেকে sheet কিছুটা উঁচু হয়। বাস্তব spacing অসংখ্য context-dependent মানে গঠিত; নতুন সার্বজনীন scale কল্পনা করা হয়নি।
+Learning board-এ উপরে নির্দেশ ও group navigation, মাঝে tiles, নিচে উচ্চারিত নাম ও play। Alphabet group পাঁচ বা ছয়টি অক্ষরের ভারসাম্যপূর্ণ set; desktop-এ সেই অনুযায়ী পাঁচ বা ছয় কলাম। রঙের দশটি tile একসঙ্গে পাঁচ কলামে। 750px থেকে alphabet তিন কলাম; 480px থেকে সব learning grid দুই কলাম। Board-এর radius mobile-এ ছোট হয়।
+
+Game-এ desktop চারটি choice এক সারিতে, প্রতিটি সর্বোচ্চ 155px; 750px থেকে 2×2 (সর্বোচ্চ 145px), 480px থেকে সর্বোচ্চ 130px। প্রথম ভুলের reveal-এ choice grid-এর জায়গায় একটি নামযুক্ত example ও Next থাকে। Main 750px থেকে মোট 32px পাশের জায়গা রাখে; 360px-এ controls আরও সংকুচিত ও প্রয়োজনমতো wrap করে।
 
 ## Elevation & Depth
 
-নরম ambient shadow কাগজ ও স্টিকার আলাদা করে; কোনো শক্ত offset outline নেই। স্বাগত পাতার shadow `0 12px 50px #64527606`, স্টিকারের `0 8px 16px #30284414`, মূল button-এর `0 6px 15px #7550ba22`। Button hover-এ `0 9px 18px #7550ba2a`। Dialog-এর `0 22px 90px #2e1a4940`, backdrop blur 4px; pause overlay blur 6px।
+Board ও tile মূলত tonal layering-এ পৃথক; স্থায়ী sheet বা primary-button shadow নেই। Subject entrance hover-এ 4px ওঠে এবং `0 10px 24px #30284412` ambient shadow পায়। Tile hover 5px, primary hover 2px ওঠে। রঙের entrance-এ তিনটি কাত করা স্ব্যাচের overlap অ্যালবামের material বজায় রাখে।
 
 ## Shapes
 
-বড় sheet, ছোট action এবং প্রায় squircle স্টিকার একই নরম পরিবারের। Desktop sheet 32px, mobile 25px। স্টিকারে 26% radius, explore-এ 24%; সমান width/height-এর সঙ্গে এই অনুপাত রাখুন। Logo চারটি রঙিন বৃত্ত এবং -8deg rotation। Icons inline SVG, 24px viewBox, সাধারণ stroke 1.8 ও গোল cap/join; এগুলো font glyph নয়।
+Board বড় গোল কোণ, action ছোট গোল কোণ, learning face সমান width/height-এর নরম squircle। Subject entrance action radius ব্যবহার করে। Color-stack স্ব্যাচে 26% radius ও rotation; শেখার tile সোজা থাকে। চার বৃত্তের logo -8deg কাত। UI icon inline SVG; color-face-ও SVG এবং forced-color-adjust:none দিয়ে মূল রং সংরক্ষণ করে। সাদা স্ব্যাচে দৃশ্যমান border আছে।
 
 ## Components
 
-### Buttons
+### Buttons and navigation
 
-মূল button বেগুনি, সাদা লেখা, অন্তত 58px উঁচু; mobile-এ 54px। Hover-এ 2px ওঠে, active-এ 1px নামে। Listening pill নরম বেগুনি ও 52px উঁচু (mobile 49px); playback-এ animated bars। Icon button বৃত্তাকার 44px; কিছু mobile header control ছোট হয়। Text button secondary navigation-এ থাকে। Focus 3px solid outline এবং 5px offset।
+Primary button অন্তত 56px উঁচু; replay অন্তত 62px, phone-এ 56px। Icon button 48px, ছোট screen-এর কিছু control 44px। Keyboard focus 3px `purple-dark` outline ও 5px offset। Disabled action ফিকে হয়; উত্তর tile নিজের রং রাখে।
 
-### Navigation and language
+Explore/Play segmented navigation-এ `aria-current`; বাংলা/English switch-এ `aria-pressed`। Track নরম বেগুনি, নির্বাচিত segment paper। Back subject shelf-এ ফেরায়। Settings dialog নেই।
 
-দুটি activity tab: selected-এ নরম বেগুনি পটভূমি ও গাঢ় লেখা; `aria-current` বর্তমান পাতা বোঝায়। বাংলা/English একটিমাত্র segmented control; selected-এ white face ও `aria-pressed`। একই নির্বাচন UI, সংখ্যা এবং এক-ভাষার color-name audio নিয়ন্ত্রণ করে।
+### Subject shelf and learning tiles
 
-### Sticker and progress
+রং, বাংলা, ইংরেজি, আরবি—চারটি entrance। অক্ষরের group navigation শুরু ও শেষে যথাযথভাবে disabled। একটি tile চাপলে শুধু তার নাম বাজে; সফল playback-এর পর heard check থাকে। এই check mastery নয়। Spoken name নিচের status-এ আসে।
 
-স্টিকার button-এর face পূর্ণ রঙে ভরা; preview/game-এ -5, 4, 3, -4deg পুনরাবৃত্ত tilt। Hover সোজা হয়ে 5px ওঠে, active 0.94 scale। সঠিক উত্তরে check, ভুলে replay চিহ্ন; disabled অবস্থায় রঙ ফিকে হয় না। Explore-এ শব্দের SVG ও নাম থাকে। পাঁচটি star slot earned হলে সোনালি হয়।
+105টি alphabet recording: বাংলা 50, ইংরেজি 26, আরবি 29; আরবির শেষ চারটি ওয়াও, হা, হামজা, ইয়া। Alphabet audio subject-এর ভাষাতেই থাকে; UI switch শুধু interface ও রঙের নামের ভাষা বদলায়। সব দশটি রং এক group-এ থাকে।
 
-সঠিক উত্তরের pop 0.65s, ভুলের wiggle 0.45s, star stamp 0.5s; প্রধান ease `cubic-bezier(.16,1,.3,1)`। OS reduced-motion সব animation/transition বন্ধ করে। স্থির চিহ্ন ও feedback তখনও থাকে।
+### Recognition and teaching reveal
 
-### নির্দিষ্ট খেলার নিয়ম
+এক session-এ একই learning group থেকে পাঁচটি প্রশ্ন, প্রতিটিতে চার choice। প্রথম সঠিক উত্তরে নাম আবার শোনানো হয় ও independent star জমে। প্রথম ভুলে সংক্ষিপ্ত সাউন্ড ইফেক্টের পর সঠিক item ও নাম দেখিয়ে শোনানো হয়। Audio শেষ হলে Next সরাসরি পরের প্রশ্নে যায় এবং assisted check জমে। সঠিক, ভুল ও সমাপ্তির প্রতিক্রিয়ায় শুধু সাউন্ড ইফেক্ট বাজে; কোনো প্রশংসার voice নেই। সঠিক উত্তরের ইফেক্ট শেষে item-এর নাম শোনানো হয়। দ্বিতীয় ভুল পর্যন্ত অপেক্ষা, elimination hint বা delayed retry queue নেই। পাঁচটি encounter-এই session শেষ হয়।
 
-নাম দুই ভাষাতেই Colorful Kids। শুধু বাংলা/English টগল থাকবে; settings dialog নেই। সব দশটি রং থেকে প্রতি প্রশ্নে চারটি অপশন; সাউন্ড ও অ্যানিমেশন চালু।
+Replay, pause/resume এবং audio-error retry রয়েছে। Finish স্বাধীন ও assisted সংখ্যা আলাদা দেখায়। Correct pop 0.6s, wrong wiggle 0.4s, listening pulse 1s; সাধারণ ease `cubic-bezier(.16,1,.3,1)`। OS reduced-motion animation/transition বন্ধ করে, স্থির feedback বজায় রাখে।
 
 ## Do's and Don'ts
 
 ### Do:
 
-- Do রঙের স্টিকারকে সবচেয়ে দৃশ্যমান উপাদান রাখুন।
-- Do বাংলা/ইংরেজি বদলালে লেখা, সংখ্যা ও রঙের নাম একসঙ্গে বদলান।
-- Do keyboard focus, ভুল/সঠিকের চিহ্ন এবং কম অ্যানিমেশন বজায় রাখুন।
+- Do বড় প্রকৃত অক্ষর ও স্ব্যাচকে শেখার কেন্দ্র রাখুন।
+- Do বাংলা/English UI পরিবর্তন এবং subject-language উচ্চারণের পার্থক্য বজায় রাখুন।
+- Do keyboard focus, স্পষ্ট check/star এবং reduced-motion সমর্থন রাখুন।
+- Do প্রথম ভুলেই শেখান এবং assisted credit আলাদা রাখুন।
 
 ### Don't:
 
-- Don't নির্বাচিত ভাষার অডিওতে অন্য ভাষা বা বাক্য যোগ করুন।
-- Don't শুধু রঙ দিয়ে ভুল/সঠিক অবস্থা বোঝান; চিহ্ন ও লেখা রাখুন।
-- Don't বর্তমান CSS/SVG স্টিকারকে অপ্রয়োজনীয় raster ছবি দিয়ে প্রতিস্থাপন করুন।
+- Don't UI-তে filler copy বা decorative footer ফেরত আনুন।
+- Don't heard marker-কে mastery বা assisted check-কে earned star বলুন।
+- Don't রঙের name clip-এ বাক্য বা দুই ভাষা মেশান।
+- Don't দ্বিতীয় ভুলের hint কিংবা delayed retry loop ফিরিয়ে আনুন।
+
+
+### বর্তমান শেখা ও খেলার নিয়ম
+
+আগের ছোট দলের নিয়মের পরিবর্তে শেখায় পুরো বর্ণমালা এক তালিকায় থাকে। খেলায় পুরো বিষয় থেকে পাঁচটি আলাদা প্রশ্ন আসে; একই পেজ খোলা থাকা অবস্থায় পরের পর্বে আগে না-আসা প্রশ্ন অগ্রাধিকার পায়। প্রথম ভুলে চারটি অপশন একই জায়গায় থাকে: সঠিকটি সামান্য বড়, বর্ডার ও চেকসহ দেখা যায়, বাকিগুলো ম্লান হয়। সঠিকটিতে ট্যাপ করলে নাম আবার শোনা যায়। নামের পরে Next চালু হয়। ফলাফলে নিরপেক্ষ সমাপ্তির লেখা, স্বাধীন ও সহায়তাপ্রাপ্ত উত্তর আলাদা; feedback শুধুই সাউন্ড ইফেক্ট।

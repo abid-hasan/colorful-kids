@@ -1,0 +1,1109 @@
+{
+  "provider": "Google AI Studio",
+  "model": "gemini-3.8-flash-tts",
+  "voice": "Gero",
+  "integration": "not integrated",
+  "languages": {
+    "en": [
+      {
+        "id": "01",
+        "letter": "A",
+        "spoken": "A",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/01.mp3",
+        "start": 0,
+        "end": 0.9471,
+        "sha256": "65b1f80dcc980eec96a3045a690774f0c195799628ef1199a413b68c93543d5d"
+      },
+      {
+        "id": "02",
+        "letter": "B",
+        "spoken": "B",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/02.mp3",
+        "start": 3.3061,
+        "end": 4.1539,
+        "sha256": "30a02d52469fc8db81cb8fe90074df879db295e59e39a641c31155e903557b46"
+      },
+      {
+        "id": "03",
+        "letter": "C",
+        "spoken": "C",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/03.mp3",
+        "start": 6.3494,
+        "end": 7.2857,
+        "sha256": "9820ec76a76723b4e1d795c4352adcd6e0a78f7f69fd31571c3bc70527e9c488"
+      },
+      {
+        "id": "04",
+        "letter": "D",
+        "spoken": "D",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/04.mp3",
+        "start": 9.193,
+        "end": 10.0412,
+        "sha256": "857f603232e67b6ee8d904e284b8712b6fbe218334c760e441c628ded592fce1"
+      },
+      {
+        "id": "05",
+        "letter": "E",
+        "spoken": "E",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/05.mp3",
+        "start": 11.8812,
+        "end": 12.661,
+        "sha256": "755631c3a19bd32ecbf792ac2239b784f84f2d2768850ab47ff5eb5b39efb6bc"
+      },
+      {
+        "id": "06",
+        "letter": "F",
+        "spoken": "F",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/06.mp3",
+        "start": 14.3661,
+        "end": 14.9827,
+        "sha256": "70ddfd4d8f97b72d1496806e6c56cff8a999e4a52af77eed108b3ffaa0da9b91"
+      },
+      {
+        "id": "07",
+        "letter": "G",
+        "spoken": "G",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/07.mp3",
+        "start": 16.6378,
+        "end": 17.4642,
+        "sha256": "a14e9dabb2854a2248f3936b3b3c19ae21c9ac495ca03b681588ddd6141900af"
+      },
+      {
+        "id": "08",
+        "letter": "H",
+        "spoken": "H",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/08.mp3",
+        "start": 19.0726,
+        "end": 19.9044,
+        "sha256": "2bd8fef8fddf98d093680934fd817105212adf7e925bffec246d760969654b62"
+      },
+      {
+        "id": "09",
+        "letter": "I",
+        "spoken": "I",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/09.mp3",
+        "start": 21.3525,
+        "end": 22.1747,
+        "sha256": "0ea4924f7523bbae32b2816ea598af570422f904039a1e0d3558e55412dfb258"
+      },
+      {
+        "id": "10",
+        "letter": "J",
+        "spoken": "J",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/10.mp3",
+        "start": 23.5457,
+        "end": 24.3256,
+        "sha256": "92662c45dcbf7c4c117507a303f5b848e1290bf454d731a8c5611dfaa5fb35c4"
+      },
+      {
+        "id": "11",
+        "letter": "K",
+        "spoken": "K",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/11.mp3",
+        "start": 25.7934,
+        "end": 26.569,
+        "sha256": "2f81d8df06fce0ddd10e349b06e983aedac5b3f0dca66affc84cd7bed5e37f2d"
+      },
+      {
+        "id": "12",
+        "letter": "L",
+        "spoken": "L",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/12.mp3",
+        "start": 28.075,
+        "end": 28.7505,
+        "sha256": "af87d3a087896b6a39046545630eedc755f54bd61212ff499e72569bbe46c5e9"
+      },
+      {
+        "id": "13",
+        "letter": "M",
+        "spoken": "M",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/13.mp3",
+        "start": 30.2573,
+        "end": 30.932,
+        "sha256": "665a76e2549a8191ee3233b86278e2ddb272ac71468cac5db18653179d49c6f3"
+      },
+      {
+        "id": "14",
+        "letter": "N",
+        "spoken": "N",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/14.mp3",
+        "start": 32.4852,
+        "end": 33.2065,
+        "sha256": "5b89bfe7bf66291a09e1b9cd0ad97a896c05cd5bca26ba4416bb6f1f082c36a6"
+      },
+      {
+        "id": "15",
+        "letter": "O",
+        "spoken": "O",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/15.mp3",
+        "start": 34.6801,
+        "end": 35.4302,
+        "sha256": "a39801f8b95626b83c7b55e0f3503ff60e0ccbddff3df717b0283033566a9266"
+      },
+      {
+        "id": "16",
+        "letter": "P",
+        "spoken": "P",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/16.mp3",
+        "start": 36.9158,
+        "end": 37.6245,
+        "sha256": "e9f1d4d0a18bafa95201431f001d146cd457f7237082b83d5e63a4b53b1dd1a4"
+      },
+      {
+        "id": "17",
+        "letter": "Q",
+        "spoken": "Q",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/17.mp3",
+        "start": 39.0923,
+        "end": 39.867,
+        "sha256": "690f15ecbee4b74c75dbff0199bd42e4ea04f562658306da6de0671745dab08f"
+      },
+      {
+        "id": "18",
+        "letter": "R",
+        "spoken": "R",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/18.mp3",
+        "start": 41.3497,
+        "end": 42.1325,
+        "sha256": "c768d1f0f3e99dde4d23ec330fe52dc6f3a7c443ba8390c26fc4e15479a7a25f"
+      },
+      {
+        "id": "19",
+        "letter": "S",
+        "spoken": "S",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/19.mp3",
+        "start": 43.6135,
+        "end": 44.4093,
+        "sha256": "50fb21f8084959c786ab6524eacaea74ab89400077cd4572ab54de74052a9fa6"
+      },
+      {
+        "id": "20",
+        "letter": "T",
+        "spoken": "T",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/20.mp3",
+        "start": 45.7127,
+        "end": 46.4486,
+        "sha256": "4f0c9be6c52e837c5b54dec81fe9b6cec7bd04c6ad5d8884637529a5a16a13c3"
+      },
+      {
+        "id": "21",
+        "letter": "U",
+        "spoken": "U",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/21.mp3",
+        "start": 47.8758,
+        "end": 48.5942,
+        "sha256": "fa6611b78d481039ef86c50ee73e012455b9d5ea1f6327745d373cc92a63c986"
+      },
+      {
+        "id": "22",
+        "letter": "V",
+        "spoken": "V",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/22.mp3",
+        "start": 50.054,
+        "end": 50.8244,
+        "sha256": "c787f782e34192cfbb67ade6a980717ada12167b5d66843d5f94787fc365ed09"
+      },
+      {
+        "id": "23",
+        "letter": "W",
+        "spoken": "W",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/23.mp3",
+        "start": 52.3224,
+        "end": 53.0523,
+        "sha256": "74ea0759a69b7808afd2704616aa8af3a953c0452c0e4ad7f186a261893e940a"
+      },
+      {
+        "id": "24",
+        "letter": "X",
+        "spoken": "X",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/24.mp3",
+        "start": 54.4837,
+        "end": 55.3503,
+        "sha256": "46e350d04fc2e87f7464f8ee2a87ff46dba24e9382cd2c3018cf9f7415353f6d"
+      },
+      {
+        "id": "25",
+        "letter": "Y",
+        "spoken": "Y",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/25.mp3",
+        "start": 56.6568,
+        "end": 57.5328,
+        "sha256": "327affc61004d468196b434e34f0886a3906e2d1f610feddc5b9e4f7e8c76937"
+      },
+      {
+        "id": "26",
+        "letter": "Z",
+        "spoken": "Zed",
+        "status": "split; pronunciation review pending",
+        "file": "clips/en/26.mp3",
+        "start": 58.8684,
+        "end": 59.84,
+        "sha256": "32a78cf87d29f5eaecddc17034b5fd0607b9834f63803c06ff13cf47bf6aebf6"
+      }
+    ],
+    "bn": [
+      {
+        "id": "01",
+        "letter": "অ",
+        "spoken": "অ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/01.mp3",
+        "start": 0,
+        "end": 0.8834,
+        "sha256": "14a98c9f3b691e5a7808dc1d0a8e461f518c97cc94657e5ab119301be253a7eb"
+      },
+      {
+        "id": "02",
+        "letter": "আ",
+        "spoken": "আ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/02.mp3",
+        "start": 2.3575,
+        "end": 2.9932,
+        "sha256": "c493a692be90b734bce5da05e4f55e7606915b137a39999c70900b1fbea9035b"
+      },
+      {
+        "id": "03",
+        "letter": "ই",
+        "spoken": "হ্রস্ব ই",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/03.mp3",
+        "start": 4.3808,
+        "end": 5.5789,
+        "sha256": "e959af543664bedbc02b897102d7caeb2aaf3f16f9489cb94b2d1ea9410c0b90"
+      },
+      {
+        "id": "04",
+        "letter": "ঈ",
+        "spoken": "দীর্ঘ ঈ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/04.mp3",
+        "start": 6.6983,
+        "end": 7.9475,
+        "sha256": "cceb5341967f8ff8b60e9a5f0fe0eacecd7beda94d6cce051e64ecb8e0f66be3"
+      },
+      {
+        "id": "05",
+        "letter": "উ",
+        "spoken": "হ্রস্ব উ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/05.mp3",
+        "start": 9.0757,
+        "end": 10.2267,
+        "sha256": "0b7b58041e1fe94fc296e6e7239f8e40801d1b66b5d837a8934a63dd3a53c8d7"
+      },
+      {
+        "id": "06",
+        "letter": "ঊ",
+        "spoken": "দীর্ঘ ঊ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/06.mp3",
+        "start": 11.3698,
+        "end": 12.6363,
+        "sha256": "33c28901be7270cacb17070d59d4ac81fb2042326723ccb0dba3a8ecc4672fb8"
+      },
+      {
+        "id": "07",
+        "letter": "ঋ",
+        "spoken": "ঋ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/07.mp3",
+        "start": 13.85,
+        "end": 14.5361,
+        "sha256": "92a9ea98fe80cb60e590e0d46a3a6f6bef3b054f0b1cb699c568d4c9d41686a7"
+      },
+      {
+        "id": "08",
+        "letter": "এ",
+        "spoken": "এ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/08.mp3",
+        "start": 15.7539,
+        "end": 16.4299,
+        "sha256": "2c4274d0759102455a8cc773f4e5747e76db85b958b1e1fd16fa878cc4f60ed0"
+      },
+      {
+        "id": "09",
+        "letter": "ঐ",
+        "spoken": "ঐ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/09.mp3",
+        "start": 17.5985,
+        "end": 18.2939,
+        "sha256": "8ef1fadd5b99dd56cabad815b8e6928a8afaf69d67f590e015af96402f52c331"
+      },
+      {
+        "id": "10",
+        "letter": "ও",
+        "spoken": "ও",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/10.mp3",
+        "start": 19.537,
+        "end": 20.2473,
+        "sha256": "8d6aa4e944d696e72dd9ae5026ef03c1be95ee8661881cbd6d30f1ce3132bb06"
+      },
+      {
+        "id": "11",
+        "letter": "ঔ",
+        "spoken": "ঔ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/11.mp3",
+        "start": 21.3886,
+        "end": 22.027,
+        "sha256": "01fb51e3eb61e203cfb5bddd08130027ef648c8d2fd65700da47ad4b20517779"
+      },
+      {
+        "id": "12",
+        "letter": "ক",
+        "spoken": "ক",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/12.mp3",
+        "start": 23.3138,
+        "end": 23.9977,
+        "sha256": "2faeb06950aff50cf2f1c903577761dae7e1c64560288c7c512934dfb6d2f34c"
+      },
+      {
+        "id": "13",
+        "letter": "খ",
+        "spoken": "খ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/13.mp3",
+        "start": 25.1905,
+        "end": 25.9799,
+        "sha256": "41fce819589ad983875d51afd6e9024baa9a792c4e46481ef6aab07d2702f95c"
+      },
+      {
+        "id": "14",
+        "letter": "গ",
+        "spoken": "গ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/14.mp3",
+        "start": 27.1732,
+        "end": 27.9992,
+        "sha256": "e3d3399ced8f2cae0bb5d5b9d9b8ab74aa74d4a9084a6b00c765c301282b4b66"
+      },
+      {
+        "id": "15",
+        "letter": "ঘ",
+        "spoken": "ঘ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/15.mp3",
+        "start": 29.0847,
+        "end": 29.9351,
+        "sha256": "646888507a4781b6d3d53806252e7ce33de94d6e85dd5d4468636dbe2345d9fa"
+      },
+      {
+        "id": "16",
+        "letter": "ঙ",
+        "spoken": "উঙ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/16.mp3",
+        "start": 31.0946,
+        "end": 31.748,
+        "sha256": "95a5160e05bf6464464e4942463bd1d57440c421c03149383ba65bc49f0902fe"
+      },
+      {
+        "id": "17",
+        "letter": "চ",
+        "spoken": "চ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/17.mp3",
+        "start": 33.0358,
+        "end": 33.7475,
+        "sha256": "d02d206f51f901291d78eaa9882d5057e5d636b6c1f669fef64af6fe30b6e3d9"
+      },
+      {
+        "id": "18",
+        "letter": "ছ",
+        "spoken": "ছ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/18.mp3",
+        "start": 34.8729,
+        "end": 35.672,
+        "sha256": "565759a1629162df26f3d2a719972ce3f7375958664796c49458d89d1803c366"
+      },
+      {
+        "id": "19",
+        "letter": "জ",
+        "spoken": "বর্গীয় জ",
+        "status": "split; pronunciation review pending",
+        "correctionRequired": false,
+        "file": "clips/bn/19.mp3",
+        "start": 0.197917,
+        "end": 1.554542,
+        "sha256": "e755dc1bb87db87d138be5f779ccc2346c7c4729ae96e6402685517e7e34f62c",
+        "source": "batches/bn-corrections.wav"
+      },
+      {
+        "id": "20",
+        "letter": "ঝ",
+        "spoken": "ঝ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/20.mp3",
+        "start": 38.7305,
+        "end": 39.5893,
+        "sha256": "f844ac3976c02bdab36ff162ccc06264716de2e89dde1b993669cc5f527cfa7f"
+      },
+      {
+        "id": "21",
+        "letter": "ঞ",
+        "spoken": "ইঞ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/21.mp3",
+        "start": 40.725,
+        "end": 41.3385,
+        "sha256": "582236bf66d8e00ebc969830207ac5b89c799ab6a781a3ef2be38c70238a645a"
+      },
+      {
+        "id": "22",
+        "letter": "ট",
+        "spoken": "ট",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/22.mp3",
+        "start": 42.6386,
+        "end": 43.3095,
+        "sha256": "c28bc2e8529dad99c99654ff985b14f78bf4781541c9479553478e8ea177a82c"
+      },
+      {
+        "id": "23",
+        "letter": "ঠ",
+        "spoken": "ঠ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/23.mp3",
+        "start": 44.4817,
+        "end": 45.2178,
+        "sha256": "82801d32a607b3a2b2aa29b2e4c917ba3e9159ce0e0ac02feff0184cc8e5877d"
+      },
+      {
+        "id": "24",
+        "letter": "ড",
+        "spoken": "ড",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/24.mp3",
+        "start": 46.3593,
+        "end": 47.13,
+        "sha256": "91c4e19c2a0ae5f0c5bf152a322e317992e4168f7e27fd1d23f851be2b88ab36"
+      },
+      {
+        "id": "25",
+        "letter": "ঢ",
+        "spoken": "ঢ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/25.mp3",
+        "start": 48.2503,
+        "end": 49.0835,
+        "sha256": "76d32ad6c399308504ec425ca3a1763a584ca5f808cfcb23da81d53c9c57f0b3"
+      },
+      {
+        "id": "26",
+        "letter": "ণ",
+        "spoken": "মূর্ধন্য ণ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/26.mp3",
+        "start": 50.174,
+        "end": 51.4972,
+        "sha256": "36ec9cb4bdbb3eb076e81886fbc46d372a92c7dc9c6b6ad4dbcc79d15a3dba52"
+      },
+      {
+        "id": "27",
+        "letter": "ত",
+        "spoken": "ত",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/27.mp3",
+        "start": 52.721,
+        "end": 53.3569,
+        "sha256": "837c317865ef229e7363ef00f9645022d5c0458b4b5914c3d027e776a158edcc"
+      },
+      {
+        "id": "28",
+        "letter": "থ",
+        "spoken": "থ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/28.mp3",
+        "start": 54.4965,
+        "end": 55.2155,
+        "sha256": "467490c251938fa7524e4ee9fb548fc129e93fe94cba2c089b432ae82cfc23db"
+      },
+      {
+        "id": "29",
+        "letter": "দ",
+        "spoken": "দ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/29.mp3",
+        "start": 56.3887,
+        "end": 57.1665,
+        "sha256": "422cfe52513b08372784ef0fef042f30a69e9a7a5c5df59f076a9cb0ffcee003"
+      },
+      {
+        "id": "30",
+        "letter": "ধ",
+        "spoken": "ধ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/30.mp3",
+        "start": 58.2252,
+        "end": 59.0346,
+        "sha256": "7a82c3e3987fb18e6e336085ff98d3218058cd06b12f8f8c5cd38c33138cd515"
+      },
+      {
+        "id": "31",
+        "letter": "ন",
+        "spoken": "দন্ত্য ন",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/31.mp3",
+        "start": 60.1052,
+        "end": 61.0899,
+        "sha256": "581d7e44e8e263324d394396ca4e1d40fa062fbcee50c422682503eddddabf54"
+      },
+      {
+        "id": "32",
+        "letter": "প",
+        "spoken": "প",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/32.mp3",
+        "start": 62.2788,
+        "end": 62.898,
+        "sha256": "f0e2581198f06a21aece9f36b74b72f0aa04da26a051f148f69f7489d2c33253"
+      },
+      {
+        "id": "33",
+        "letter": "ফ",
+        "spoken": "ফ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/33.mp3",
+        "start": 64.0749,
+        "end": 64.7998,
+        "sha256": "7343bec52dd619cbc3b832cb0290af7e875df85d593385a5d8a11b705865b007"
+      },
+      {
+        "id": "34",
+        "letter": "ব",
+        "spoken": "ব",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/34.mp3",
+        "start": 65.8757,
+        "end": 66.6113,
+        "sha256": "ad0f8a78d0a98fb096f87277cd1473970a22cb6f415826335009ff19146628dd"
+      },
+      {
+        "id": "35",
+        "letter": "ভ",
+        "spoken": "ভ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/35.mp3",
+        "start": 67.7163,
+        "end": 68.547,
+        "sha256": "5c13c6628011042b0ed8beeaffb6b9479e48c0b73ae1ac10a8673e87c4b41a54"
+      },
+      {
+        "id": "36",
+        "letter": "ম",
+        "spoken": "ম",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/36.mp3",
+        "start": 69.6309,
+        "end": 70.2749,
+        "sha256": "3d8ead75ba7d5e757ffa4640ee1c1d6d226c4426ec0801e2a9381c6e53529458"
+      },
+      {
+        "id": "37",
+        "letter": "য",
+        "spoken": "অন্তঃস্থ য",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/37.mp3",
+        "start": 71.5765,
+        "end": 72.8626,
+        "sha256": "db6316043f6c0a217c7343b00d6c11189a1a2afe67f51be3715312f4fade251e"
+      },
+      {
+        "id": "38",
+        "letter": "র",
+        "spoken": "র",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/38.mp3",
+        "start": 74.084,
+        "end": 74.8326,
+        "sha256": "2330e02716f1d90e257f46c9f48c0f5d25cbebe5731e95577db2a5643459e3ef"
+      },
+      {
+        "id": "39",
+        "letter": "ল",
+        "spoken": "ল",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/39.mp3",
+        "start": 76.078,
+        "end": 76.8466,
+        "sha256": "c26096bc18566f1cef0162634c94b2f20dc9354a8141f0cb761f6695ad0c7107"
+      },
+      {
+        "id": "40",
+        "letter": "শ",
+        "spoken": "তালব্য শ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/40.mp3",
+        "start": 78.1266,
+        "end": 79.3039,
+        "sha256": "44f5d73a02bb82e7ad9d65c24b441b618234051f707a524831a5980dbe428166"
+      },
+      {
+        "id": "41",
+        "letter": "ষ",
+        "spoken": "মূর্ধন্য ষ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/41.mp3",
+        "start": 80.4197,
+        "end": 81.7829,
+        "sha256": "16c3c6c78ccd661375f2259cb8e0c0f2f3574bdd9b3a598cb53463489a286ea6"
+      },
+      {
+        "id": "42",
+        "letter": "স",
+        "spoken": "দন্ত্য স",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/42.mp3",
+        "start": 82.9446,
+        "end": 84.1085,
+        "sha256": "8e59103cde9874741274669d6ef7cab5c82c10f71463cedd60bab268b801fe1f"
+      },
+      {
+        "id": "43",
+        "letter": "হ",
+        "spoken": "হ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/43.mp3",
+        "start": 85.1561,
+        "end": 85.9584,
+        "sha256": "ae02eee953c7cefed5f1f574b7f269899dbb2acbaabe0265677514bd5926e45b"
+      },
+      {
+        "id": "44",
+        "letter": "ড়",
+        "spoken": "ড়",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/44.mp3",
+        "start": 0,
+        "end": 0.948,
+        "sha256": "fc577cc16d2f249755023ba458891565cb0a90e00fd1d6ccfd76b69b76e4f7fe",
+        "source": "batches/bn-rra-rha.wav"
+      },
+      {
+        "id": "45",
+        "letter": "ঢ়",
+        "spoken": "ঢ়",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/45.mp3",
+        "start": 3.853,
+        "end": 4.8,
+        "sha256": "8a384eaf1b0bcbfdf79307774cbdcf76fd4a45c823bca443563e87f5c13f8a64",
+        "source": "batches/bn-rra-rha.wav"
+      },
+      {
+        "id": "46",
+        "letter": "য়",
+        "spoken": "অন্তঃস্থ য়",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/46.mp3",
+        "start": 91.724,
+        "end": 92.844,
+        "sha256": "643d1a4a53b59521670e38ee2e6dc560b4a612b5969245d1601b84725bdbc803"
+      },
+      {
+        "id": "47",
+        "letter": "ৎ",
+        "spoken": "খণ্ড ত",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/47.mp3",
+        "start": 94.0442,
+        "end": 95.0144,
+        "sha256": "e6c9017305de562ca9529853c028b84efe2a67d700a34fa978ab0ea5b47852c1"
+      },
+      {
+        "id": "48",
+        "letter": "ং",
+        "spoken": "অনুস্বার",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/48.mp3",
+        "start": 96.3348,
+        "end": 97.2841,
+        "sha256": "057781b2bd2498af45a64d3b19ca86c66cb664ff7320f95e5a2a658dcad92adc"
+      },
+      {
+        "id": "49",
+        "letter": "ঃ",
+        "spoken": "বিসর্গ",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/49.mp3",
+        "start": 98.5542,
+        "end": 99.5695,
+        "sha256": "67034ec23a26160b53387726ea170a79f90254ea85500a3bd3e40a5be51b6f62"
+      },
+      {
+        "id": "50",
+        "letter": "ঁ",
+        "spoken": "চন্দ্রবিন্দু",
+        "status": "split; pronunciation review pending",
+        "file": "clips/bn/50.mp3",
+        "start": 100.7674,
+        "end": 101.7282,
+        "sha256": "f0296dbf634f70f3085cf6b5933764e6a51aba12e60e6629f4b7ca8377854b5b"
+      }
+    ],
+    "ar": [
+      {
+        "id": "01",
+        "letter": "ا",
+        "spoken": "أَلِف",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/01.mp3",
+        "start": 0,
+        "end": 1.0386,
+        "sha256": "3652527b6b017833d2467a375991bf1bd926c4d959465d963eadb7889fef2970"
+      },
+      {
+        "id": "02",
+        "letter": "ب",
+        "spoken": "بَا",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/02.mp3",
+        "start": 0,
+        "end": 1.0514,
+        "sha256": "b58bcb3694d458358fb02cbb300da201476da5ad1cb49dfa3e77802ced661eaa",
+        "source": "batches/ar-qasr.wav"
+      },
+      {
+        "id": "03",
+        "letter": "ت",
+        "spoken": "تَا",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/03.mp3",
+        "start": 2.7744,
+        "end": 3.6133,
+        "sha256": "986bf18b5e118d83a278802c7a2a6c161f49514bcc3eff4b8dffdd949d3d559e",
+        "source": "batches/ar-qasr.wav"
+      },
+      {
+        "id": "04",
+        "letter": "ث",
+        "spoken": "ثَا",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/04.mp3",
+        "start": 5.0718,
+        "end": 5.9764,
+        "sha256": "6770f689dfc915e117b02d66a18cc2bed7810f343b120e568fe2e1c84d1e0dbc",
+        "source": "batches/ar-qasr.wav"
+      },
+      {
+        "id": "05",
+        "letter": "ج",
+        "spoken": "جِيم",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/05.mp3",
+        "start": 9.2081,
+        "end": 10.335,
+        "sha256": "808b597a6bbec24c3e1ce61e230697d7075bf758da64366161ed259999fbee01"
+      },
+      {
+        "id": "06",
+        "letter": "ح",
+        "spoken": "حَا",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/06.mp3",
+        "start": 7.3782,
+        "end": 8.3425,
+        "sha256": "cf4d6bf0c87551b2eeb7b5c7a6d2f65581432dd3a4b1787766b839ee4514fe62",
+        "source": "batches/ar-qasr.wav"
+      },
+      {
+        "id": "07",
+        "letter": "خ",
+        "spoken": "خَا",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/07.mp3",
+        "start": 9.6984,
+        "end": 10.593,
+        "sha256": "ed724151e1fbb470434d08a9a133b0a086f198fb4e83143e2a93bf8af8f2daa1",
+        "source": "batches/ar-qasr.wav"
+      },
+      {
+        "id": "08",
+        "letter": "د",
+        "spoken": "دَال",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/08.mp3",
+        "start": 16.0441,
+        "end": 17.0821,
+        "sha256": "28e0bff6d437bbb1f5d71b54b36fd74d5077066ca5ff90290e4228aed278592b"
+      },
+      {
+        "id": "09",
+        "letter": "ذ",
+        "spoken": "ذَال",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/09.mp3",
+        "start": 18.4112,
+        "end": 19.384,
+        "sha256": "1176dc320b91bb87af1a6c82f2f8f16331c75636e2454b50315fc455a4ccd9b0"
+      },
+      {
+        "id": "10",
+        "letter": "ر",
+        "spoken": "رَا",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/10.mp3",
+        "start": 11.9698,
+        "end": 12.7863,
+        "sha256": "08c54a1fc2bc102bc9c0a8436ca3c2c012178ffdc829ab892821403a87526fe3",
+        "source": "batches/ar-qasr.wav"
+      },
+      {
+        "id": "11",
+        "letter": "ز",
+        "spoken": "زَا",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/11.mp3",
+        "start": 14.1362,
+        "end": 15.0025,
+        "sha256": "6bb1ced0f15852a444e2bd8c7ac6349c322a1c20b512b50f97afedf2e8a3f0f0",
+        "source": "batches/ar-qasr.wav"
+      },
+      {
+        "id": "12",
+        "letter": "س",
+        "spoken": "سِين",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/12.mp3",
+        "start": 25.0637,
+        "end": 26.1084,
+        "sha256": "c9937d810333703e11147081a68c4d662bd8a025bccb1580eb3e95b448b693ad"
+      },
+      {
+        "id": "13",
+        "letter": "ش",
+        "spoken": "شِين",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/13.mp3",
+        "start": 27.2766,
+        "end": 28.3793,
+        "sha256": "22c07eba99749cbc0d80928d4cb656838a5ce52e326ece6ac1c5cf177f64202b"
+      },
+      {
+        "id": "14",
+        "letter": "ص",
+        "spoken": "صَاد",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/14.mp3",
+        "start": 29.5,
+        "end": 30.5275,
+        "sha256": "909a4bcde23736fb78c4359976cb49be8e82216b9bc7aca0e481458938452e31"
+      },
+      {
+        "id": "15",
+        "letter": "ض",
+        "spoken": "ضَاد",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/15.mp3",
+        "start": 31.7712,
+        "end": 32.9205,
+        "sha256": "56cdf0a58a6e6fee1c8b85d147aa7b35083fbba77ad65c9de9f91f148d0af84f"
+      },
+      {
+        "id": "16",
+        "letter": "ط",
+        "spoken": "طَا",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/16.mp3",
+        "start": 16.3835,
+        "end": 17.1061,
+        "sha256": "af0e560ed9e933af1926f4427926955ee3cdc1a496a8da99ebbe88c2655a1863",
+        "source": "batches/ar-qasr.wav"
+      },
+      {
+        "id": "17",
+        "letter": "ظ",
+        "spoken": "ظَا",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/17.mp3",
+        "start": 18.4475,
+        "end": 19.2235,
+        "sha256": "bbe81532a4da212975cf8dfaf61e9a3a5f1b7fc14a95214a77f533417721eb47",
+        "source": "batches/ar-qasr.wav"
+      },
+      {
+        "id": "18",
+        "letter": "ع",
+        "spoken": "عَيْن",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/18.mp3",
+        "start": 38.4503,
+        "end": 39.3961,
+        "sha256": "432503e3398fb368399c340118b28b9ce12e4370b9e7333928ef814c585a692e"
+      },
+      {
+        "id": "19",
+        "letter": "غ",
+        "spoken": "غَيْن",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/19.mp3",
+        "start": 40.5596,
+        "end": 41.562,
+        "sha256": "a85b51e19faf793f7d5f6dfc70e30ed28fb6fa32d22f864f9d00ee015d6345b4"
+      },
+      {
+        "id": "20",
+        "letter": "ف",
+        "spoken": "فَا",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/20.mp3",
+        "start": 20.5932,
+        "end": 21.4259,
+        "sha256": "862a1203e157390cf82f9c3ecf7528ffb72b6b4572bbfc4e646fc0a7a9e9ec7d",
+        "source": "batches/ar-qasr.wav"
+      },
+      {
+        "id": "21",
+        "letter": "ق",
+        "spoken": "قَاف",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/21.mp3",
+        "start": 45.004,
+        "end": 45.83,
+        "sha256": "338fbe90a001cfa2655d426900c0339aba1ca14428587e78be7e59223d089365"
+      },
+      {
+        "id": "22",
+        "letter": "ك",
+        "spoken": "كَاف",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/22.mp3",
+        "start": 47.242,
+        "end": 48.1407,
+        "sha256": "99eacebe520c25628a346eb805cb27f36710ed727548d2b2af0e89209b4df3d2"
+      },
+      {
+        "id": "23",
+        "letter": "ل",
+        "spoken": "لَام",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/23.mp3",
+        "start": 49.4714,
+        "end": 50.4145,
+        "sha256": "ac082976a242fdfbe043c2bfd61070120bc026fdf9be956c7f9e572f3538b477"
+      },
+      {
+        "id": "24",
+        "letter": "م",
+        "spoken": "مِيم",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/24.mp3",
+        "start": 51.6186,
+        "end": 52.6314,
+        "sha256": "c0416dfcb5340658833213b6fef346c91961ea3cf90bd0191c612e5933a6f878"
+      },
+      {
+        "id": "25",
+        "letter": "ن",
+        "spoken": "نُون",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/25.mp3",
+        "start": 53.8859,
+        "end": 54.7968,
+        "sha256": "22f8199ab7c0bb1540fcf7fdfbdc2f195b797e41a134496553984212ebf98d09"
+      },
+      {
+        "id": "26",
+        "letter": "ه",
+        "spoken": "هَا",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/26.mp3",
+        "start": 22.8015,
+        "end": 23.69,
+        "sha256": "0fe934697efa926db77c6d19591477d0bb06f46e98f08f8fac13fd03d1fdcba1",
+        "source": "batches/ar-qasr.wav"
+      },
+      {
+        "id": "27",
+        "letter": "و",
+        "spoken": "وَاو",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/27.mp3",
+        "start": 58.0437,
+        "end": 59.0603,
+        "sha256": "182d480c487ae9e6e7f99d2475064aee852f79c238910e523b4c1d7f142457ec"
+      },
+      {
+        "id": "28",
+        "letter": "ي",
+        "spoken": "يَا",
+        "status": "split; pronunciation review pending",
+        "file": "clips/ar/28.mp3",
+        "start": 25.0375,
+        "end": 25.88,
+        "sha256": "85feed2bc9c777d64ed436a920cdab8b012c0c2951bb05c053962e0d9587ed75",
+        "source": "batches/ar-qasr.wav"
+      },
+      {
+        "id": "29",
+        "letter": "ء",
+        "spoken": "هَمْزَة",
+        "file": "clips/ar/29.mp3",
+        "source": "batches/ar-za-hamza.wav",
+        "start": 4.7455,
+        "end": 5.8,
+        "sha256": "16f1ce621d4cf92c5e377e84dc998de98b3d9ab49a13c47c49e735e9064ce682",
+        "status": "split; pronunciation review pending"
+      }
+    ]
+  },
+  "references": [
+    "https://www.open.edu/openlearn/mod/oucontent/view.php?id=171153&section=3",
+    "https://en.wikipedia.org/wiki/Bengali_alphabet"
+  ],
+  "pronunciationReview": "Pending listening review; segment counts and audio validity do not establish correct pronunciation.",
+  "batches": {
+    "bn": {
+      "file": "batches/bn.wav",
+      "duration": 102.56,
+      "sha256": "59b774a24d1463facfebb7275ad811fc5c260e3944342204cf0c5744c28378f9",
+      "segments": 50
+    },
+    "ar": {
+      "file": "batches/ar.wav",
+      "duration": 61.44,
+      "sha256": "7e9da35a68ae13a11d5eeec6190e4bb10beb7f111c3fc24b356538c5d6ee94d7",
+      "segments": 28
+    },
+    "en": {
+      "file": "batches/en.wav",
+      "duration": 59.84,
+      "sha256": "960120b93fd4238628085b0551aa1b4da7520c650103d8629fb828be12ee817e",
+      "segments": 26
+    }
+  },
+  "generationRequests": 8,
+  "generationNotes": "Three language batches; English regenerated once after truncated export; one Bengali correction for বর্গীয় জ. No separate sample requests. One additional batch for standalone ড় and ঢ় pronunciations. One batch replacing ز with زَاء and adding ء (هَمْزَة). One batch changing twelve Arabic names to qasr without final hamza; standalone هَمْزَة preserved.",
+  "status": "105 clips generated and split; listening review pending; not integrated"
+}

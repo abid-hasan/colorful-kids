@@ -1,0 +1,533 @@
+{
+  "en": [
+    {
+      "id": "01",
+      "symbol": "A",
+      "spoken": "A"
+    },
+    {
+      "id": "02",
+      "symbol": "B",
+      "spoken": "B"
+    },
+    {
+      "id": "03",
+      "symbol": "C",
+      "spoken": "C"
+    },
+    {
+      "id": "04",
+      "symbol": "D",
+      "spoken": "D"
+    },
+    {
+      "id": "05",
+      "symbol": "E",
+      "spoken": "E"
+    },
+    {
+      "id": "06",
+      "symbol": "F",
+      "spoken": "F"
+    },
+    {
+      "id": "07",
+      "symbol": "G",
+      "spoken": "G"
+    },
+    {
+      "id": "08",
+      "symbol": "H",
+      "spoken": "H"
+    },
+    {
+      "id": "09",
+      "symbol": "I",
+      "spoken": "I"
+    },
+    {
+      "id": "10",
+      "symbol": "J",
+      "spoken": "J"
+    },
+    {
+      "id": "11",
+      "symbol": "K",
+      "spoken": "K"
+    },
+    {
+      "id": "12",
+      "symbol": "L",
+      "spoken": "L"
+    },
+    {
+      "id": "13",
+      "symbol": "M",
+      "spoken": "M"
+    },
+    {
+      "id": "14",
+      "symbol": "N",
+      "spoken": "N"
+    },
+    {
+      "id": "15",
+      "symbol": "O",
+      "spoken": "O"
+    },
+    {
+      "id": "16",
+      "symbol": "P",
+      "spoken": "P"
+    },
+    {
+      "id": "17",
+      "symbol": "Q",
+      "spoken": "Q"
+    },
+    {
+      "id": "18",
+      "symbol": "R",
+      "spoken": "R"
+    },
+    {
+      "id": "19",
+      "symbol": "S",
+      "spoken": "S"
+    },
+    {
+      "id": "20",
+      "symbol": "T",
+      "spoken": "T"
+    },
+    {
+      "id": "21",
+      "symbol": "U",
+      "spoken": "U"
+    },
+    {
+      "id": "22",
+      "symbol": "V",
+      "spoken": "V"
+    },
+    {
+      "id": "23",
+      "symbol": "W",
+      "spoken": "W"
+    },
+    {
+      "id": "24",
+      "symbol": "X",
+      "spoken": "X"
+    },
+    {
+      "id": "25",
+      "symbol": "Y",
+      "spoken": "Y"
+    },
+    {
+      "id": "26",
+      "symbol": "Z",
+      "spoken": "Zed"
+    }
+  ],
+  "bn": [
+    {
+      "id": "01",
+      "symbol": "অ",
+      "spoken": "অ"
+    },
+    {
+      "id": "02",
+      "symbol": "আ",
+      "spoken": "আ"
+    },
+    {
+      "id": "03",
+      "symbol": "ই",
+      "spoken": "হ্রস্ব ই"
+    },
+    {
+      "id": "04",
+      "symbol": "ঈ",
+      "spoken": "দীর্ঘ ঈ"
+    },
+    {
+      "id": "05",
+      "symbol": "উ",
+      "spoken": "হ্রস্ব উ"
+    },
+    {
+      "id": "06",
+      "symbol": "ঊ",
+      "spoken": "দীর্ঘ ঊ"
+    },
+    {
+      "id": "07",
+      "symbol": "ঋ",
+      "spoken": "ঋ"
+    },
+    {
+      "id": "08",
+      "symbol": "এ",
+      "spoken": "এ"
+    },
+    {
+      "id": "09",
+      "symbol": "ঐ",
+      "spoken": "ঐ"
+    },
+    {
+      "id": "10",
+      "symbol": "ও",
+      "spoken": "ও"
+    },
+    {
+      "id": "11",
+      "symbol": "ঔ",
+      "spoken": "ঔ"
+    },
+    {
+      "id": "12",
+      "symbol": "ক",
+      "spoken": "ক"
+    },
+    {
+      "id": "13",
+      "symbol": "খ",
+      "spoken": "খ"
+    },
+    {
+      "id": "14",
+      "symbol": "গ",
+      "spoken": "গ"
+    },
+    {
+      "id": "15",
+      "symbol": "ঘ",
+      "spoken": "ঘ"
+    },
+    {
+      "id": "16",
+      "symbol": "ঙ",
+      "spoken": "উঙ"
+    },
+    {
+      "id": "17",
+      "symbol": "চ",
+      "spoken": "চ"
+    },
+    {
+      "id": "18",
+      "symbol": "ছ",
+      "spoken": "ছ"
+    },
+    {
+      "id": "19",
+      "symbol": "জ",
+      "spoken": "বর্গীয় জ"
+    },
+    {
+      "id": "20",
+      "symbol": "ঝ",
+      "spoken": "ঝ"
+    },
+    {
+      "id": "21",
+      "symbol": "ঞ",
+      "spoken": "ইঞ"
+    },
+    {
+      "id": "22",
+      "symbol": "ট",
+      "spoken": "ট"
+    },
+    {
+      "id": "23",
+      "symbol": "ঠ",
+      "spoken": "ঠ"
+    },
+    {
+      "id": "24",
+      "symbol": "ড",
+      "spoken": "ড"
+    },
+    {
+      "id": "25",
+      "symbol": "ঢ",
+      "spoken": "ঢ"
+    },
+    {
+      "id": "26",
+      "symbol": "ণ",
+      "spoken": "মূর্ধন্য ণ"
+    },
+    {
+      "id": "27",
+      "symbol": "ত",
+      "spoken": "ত"
+    },
+    {
+      "id": "28",
+      "symbol": "থ",
+      "spoken": "থ"
+    },
+    {
+      "id": "29",
+      "symbol": "দ",
+      "spoken": "দ"
+    },
+    {
+      "id": "30",
+      "symbol": "ধ",
+      "spoken": "ধ"
+    },
+    {
+      "id": "31",
+      "symbol": "ন",
+      "spoken": "দন্ত্য ন"
+    },
+    {
+      "id": "32",
+      "symbol": "প",
+      "spoken": "প"
+    },
+    {
+      "id": "33",
+      "symbol": "ফ",
+      "spoken": "ফ"
+    },
+    {
+      "id": "34",
+      "symbol": "ব",
+      "spoken": "ব"
+    },
+    {
+      "id": "35",
+      "symbol": "ভ",
+      "spoken": "ভ"
+    },
+    {
+      "id": "36",
+      "symbol": "ম",
+      "spoken": "ম"
+    },
+    {
+      "id": "37",
+      "symbol": "য",
+      "spoken": "অন্তঃস্থ য"
+    },
+    {
+      "id": "38",
+      "symbol": "র",
+      "spoken": "র"
+    },
+    {
+      "id": "39",
+      "symbol": "ল",
+      "spoken": "ল"
+    },
+    {
+      "id": "40",
+      "symbol": "শ",
+      "spoken": "তালব্য শ"
+    },
+    {
+      "id": "41",
+      "symbol": "ষ",
+      "spoken": "মূর্ধন্য ষ"
+    },
+    {
+      "id": "42",
+      "symbol": "স",
+      "spoken": "দন্ত্য স"
+    },
+    {
+      "id": "43",
+      "symbol": "হ",
+      "spoken": "হ"
+    },
+    {
+      "id": "44",
+      "symbol": "ড়",
+      "spoken": "ড়"
+    },
+    {
+      "id": "45",
+      "symbol": "ঢ়",
+      "spoken": "ঢ়"
+    },
+    {
+      "id": "46",
+      "symbol": "য়",
+      "spoken": "অন্তঃস্থ য়"
+    },
+    {
+      "id": "47",
+      "symbol": "ৎ",
+      "spoken": "খণ্ড ত"
+    },
+    {
+      "id": "48",
+      "symbol": "ং",
+      "spoken": "অনুস্বার"
+    },
+    {
+      "id": "49",
+      "symbol": "ঃ",
+      "spoken": "বিসর্গ"
+    },
+    {
+      "id": "50",
+      "symbol": "ঁ",
+      "spoken": "চন্দ্রবিন্দু"
+    }
+  ],
+  "ar": [
+    {
+      "id": "01",
+      "symbol": "ا",
+      "spoken": "أَلِف"
+    },
+    {
+      "id": "02",
+      "symbol": "ب",
+      "spoken": "بَا"
+    },
+    {
+      "id": "03",
+      "symbol": "ت",
+      "spoken": "تَا"
+    },
+    {
+      "id": "04",
+      "symbol": "ث",
+      "spoken": "ثَا"
+    },
+    {
+      "id": "05",
+      "symbol": "ج",
+      "spoken": "جِيم"
+    },
+    {
+      "id": "06",
+      "symbol": "ح",
+      "spoken": "حَا"
+    },
+    {
+      "id": "07",
+      "symbol": "خ",
+      "spoken": "خَا"
+    },
+    {
+      "id": "08",
+      "symbol": "د",
+      "spoken": "دَال"
+    },
+    {
+      "id": "09",
+      "symbol": "ذ",
+      "spoken": "ذَال"
+    },
+    {
+      "id": "10",
+      "symbol": "ر",
+      "spoken": "رَا"
+    },
+    {
+      "id": "11",
+      "symbol": "ز",
+      "spoken": "زَا"
+    },
+    {
+      "id": "12",
+      "symbol": "س",
+      "spoken": "سِين"
+    },
+    {
+      "id": "13",
+      "symbol": "ش",
+      "spoken": "شِين"
+    },
+    {
+      "id": "14",
+      "symbol": "ص",
+      "spoken": "صَاد"
+    },
+    {
+      "id": "15",
+      "symbol": "ض",
+      "spoken": "ضَاد"
+    },
+    {
+      "id": "16",
+      "symbol": "ط",
+      "spoken": "طَا"
+    },
+    {
+      "id": "17",
+      "symbol": "ظ",
+      "spoken": "ظَا"
+    },
+    {
+      "id": "18",
+      "symbol": "ع",
+      "spoken": "عَيْن"
+    },
+    {
+      "id": "19",
+      "symbol": "غ",
+      "spoken": "غَيْن"
+    },
+    {
+      "id": "20",
+      "symbol": "ف",
+      "spoken": "فَا"
+    },
+    {
+      "id": "21",
+      "symbol": "ق",
+      "spoken": "قَاف"
+    },
+    {
+      "id": "22",
+      "symbol": "ك",
+      "spoken": "كَاف"
+    },
+    {
+      "id": "23",
+      "symbol": "ل",
+      "spoken": "لَام"
+    },
+    {
+      "id": "24",
+      "symbol": "م",
+      "spoken": "مِيم"
+    },
+    {
+      "id": "25",
+      "symbol": "ن",
+      "spoken": "نُون"
+    },
+    {
+      "id": "27",
+      "symbol": "و",
+      "spoken": "وَاو"
+    },
+    {
+      "id": "26",
+      "symbol": "ه",
+      "spoken": "هَا"
+    },
+    {
+      "id": "29",
+      "symbol": "ء",
+      "spoken": "هَمْزَة"
+    },
+    {
+      "id": "28",
+      "symbol": "ي",
+      "spoken": "يَا"
+    }
+  ]
+}

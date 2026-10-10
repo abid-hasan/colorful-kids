@@ -1,0 +1,50 @@
+অ. <long pause>
+আ. <long pause>
+হ্রস্ব ই. <long pause>
+দীর্ঘ ঈ. <long pause>
+হ্রস্ব উ. <long pause>
+দীর্ঘ ঊ. <long pause>
+ঋ. <long pause>
+এ. <long pause>
+ঐ. <long pause>
+ও. <long pause>
+ঔ. <long pause>
+ক. <long pause>
+খ. <long pause>
+গ. <long pause>
+ঘ. <long pause>
+উঙ. <long pause>
+চ. <long pause>
+ছ. <long pause>
+জ. <long pause>
+ঝ. <long pause>
+ইঞ. <long pause>
+ট. <long pause>
+ঠ. <long pause>
+ড. <long pause>
+ঢ. <long pause>
+মূর্ধন্য ণ. <long pause>
+ত. <long pause>
+থ. <long pause>
+দ. <long pause>
+ধ. <long pause>
+দন্ত্য ন. <long pause>
+প. <long pause>
+ফ. <long pause>
+ব. <long pause>
+ভ. <long pause>
+ম. <long pause>
+অন্তঃস্থ য. <long pause>
+র. <long pause>
+ল. <long pause>
+তালব্য শ. <long pause>
+মূর্ধন্য ষ. <long pause>
+দন্ত্য স. <long pause>
+হ. <long pause>
+ডয়ে শূন্য ড়. <long pause>
+ঢয়ে শূন্য ঢ়. <long pause>
+অন্তঃস্থ য়. <long pause>
+খণ্ড ত. <long pause>
+অনুস্বার. <long pause>
+বিসর্গ. <long pause>
+চন্দ্রবিন্দু.

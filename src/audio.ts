@@ -23,9 +23,9 @@ export class Sound {
     this.nodes = [];
   }
 
-  play(id: string, language: 'bn' | 'en'): Promise<boolean> {
+  playFile(path: string): Promise<boolean> {
     this.stop();
-    this.voice.src = `${import.meta.env.BASE_URL}audio/${language}/${id}.mp3?v=gero-20261010`;
+    this.voice.src = `${import.meta.env.BASE_URL}${path}`;
     this.voice.volume = 0.85;
     return new Promise(resolve => {
       this.finish = resolve;
@@ -42,11 +42,6 @@ export class Sound {
       this.timeout = setTimeout(() => { this.voice.pause(); finish(false); }, 12000);
       this.voice.play().catch(() => finish(false));
     });
-  }
-
-  feedback(kind: 'correct' | 'wrong' | 'finish', language: 'bn' | 'en'): Promise<boolean> {
-    const available = import.meta.env.VOICE_FEEDBACK as string[];
-    return available.includes(`${language}/${kind}`) ? this.play(kind, language) : Promise.resolve(false);
   }
 
   effect(kind: 'correct' | 'wrong' | 'finish') {

@@ -2,23 +2,28 @@
 version: 1
 slug: "src-main-ts"
 primary_target: "src/main.ts"
-related_targets: ["src/style.css","src/i18n.ts"]
+related_targets: ["src/style.css","src/i18n.ts","src/curriculum.ts"]
 ---
 
-# Color-learning game
+# Colorful Kids learning activities
 
-Mode: Operate. Audience: a four-year-old on laptop or mobile Chrome.
+Mode: Operate. Extend the existing sticker-album world for four subjects; no replacement brand or concept tournament. Audience: a four-year-old using touch or a mouse.
 
 ## Direction contract
 
-THESIS: A small sticker-album play surface; hearing and selecting a color is the central event. The user delegated completion while away, overriding the pending visual-choice round; this session proceeds directly in code without recording a standing workflow preference.
+THESIS: Choose a subject, touch to hear, then recognize it by listening. Every error must teach rather than reward elimination.
 
-OWN-WORLD: Quiet lavender ground #f4f0fb, warm-white sheet #fffefa, plum ink #302844 and purple action #7550ba. Saturated color stickers are the learning content. Baloo Da 2 Bengali and rounded Nunito English; no pictorial raster assets required.
+OWN-WORLD: Inherit warm paper, lavender ground, plum lettering, purple controls, Baloo and Nunito. Large authentic learning glyphs and protected SVG color swatches carry the visual identity. No decorative copy or footer.
 
-STORY: Start, listen to one color name in the selected language, choose the matching sticker, collect five stars. Wrong answers invite another try without losing progress. An exploration page speaks any tapped color.
+STORY: Four subject entrances open a small group of learning tiles. The same group enters a five-question activity. A prominent replay control and immediate first-error teaching reveal help a child who missed a prompt. Next advances directly; no retry loop. Independent recognition stays distinct from assisted discovery.
 
-FIRST VIEWPORT: Small four-color logo and language toggle above two activity tabs. A large uninterrupted page holds left-aligned welcome lettering and start action beside four generous color stickers. Mobile stacks the copy over a two-by-two color arrangement. During play the listening control leads into four stickers and a five-star trail.
+FIRST VIEWPORT: Compact brand and one language switch. A short question above a broad color entrance and three alphabet entrances. On the activity page, back and subject lead to Explore/Play. Five to six alphabet tiles, group navigation and one play action form the learning tray. On phones, choices are a large two-by-two grid.
 
-FORM: Sticker album, candidate 6 of seven grounded worlds (play tray, storybook, felt board, puppet stage, garden, sticker album, block print), seed f03aa456. Signature motion: a found color lifts, a star stamps into the progress trail; wrong selections softly wobble. The technical alternatives supplied by the catalog lose audience identification and color-task clarity; retain their discipline of minimal controls and consistent spacing rather than their surface styles.
+FORM: Extension of the existing sticker album, original seed f03aa456. A correct tile lifts once; a star stamps for independent recognition. Assisted completion uses a calm check, not a false earned star. Reveal replaces guessing with one large named example.
 
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+
+
+### বর্তমান শেখা ও খেলার নিয়ম
+
+আগের ছোট দলের নিয়মের পরিবর্তে শেখায় পুরো বর্ণমালা এক তালিকায় থাকে। খেলায় পুরো বিষয় থেকে পাঁচটি আলাদা প্রশ্ন আসে; একই পেজ খোলা থাকা অবস্থায় পরের পর্বে আগে না-আসা প্রশ্ন অগ্রাধিকার পায়। প্রথম ভুলে চারটি অপশন একই জায়গায় থাকে: সঠিকটি সামান্য বড়, বর্ডার ও চেকসহ দেখা যায়, বাকিগুলো ম্লান হয়। সঠিকটিতে ট্যাপ করলে নাম আবার শোনা যায়। নামের পরে Next চালু হয়। ফলাফলে নিরপেক্ষ সমাপ্তির লেখা, স্বাধীন ও সহায়তাপ্রাপ্ত উত্তর আলাদা; feedback শুধুই সাউন্ড ইফেক্ট।
