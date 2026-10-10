@@ -1,0 +1,1006 @@
+{
+  "bn": [
+    {
+      "id": "001",
+      "symbol": "১",
+      "spoken": "এক"
+    },
+    {
+      "id": "002",
+      "symbol": "২",
+      "spoken": "দুই"
+    },
+    {
+      "id": "003",
+      "symbol": "৩",
+      "spoken": "তিন"
+    },
+    {
+      "id": "004",
+      "symbol": "৪",
+      "spoken": "চার"
+    },
+    {
+      "id": "005",
+      "symbol": "৫",
+      "spoken": "পাঁচ"
+    },
+    {
+      "id": "006",
+      "symbol": "৬",
+      "spoken": "ছয়"
+    },
+    {
+      "id": "007",
+      "symbol": "৭",
+      "spoken": "সাত"
+    },
+    {
+      "id": "008",
+      "symbol": "৮",
+      "spoken": "আট"
+    },
+    {
+      "id": "009",
+      "symbol": "৯",
+      "spoken": "নয়"
+    },
+    {
+      "id": "010",
+      "symbol": "১০",
+      "spoken": "দশ"
+    },
+    {
+      "id": "011",
+      "symbol": "১১",
+      "spoken": "এগারো"
+    },
+    {
+      "id": "012",
+      "symbol": "১২",
+      "spoken": "বারো"
+    },
+    {
+      "id": "013",
+      "symbol": "১৩",
+      "spoken": "তেরো"
+    },
+    {
+      "id": "014",
+      "symbol": "১৪",
+      "spoken": "চৌদ্দ"
+    },
+    {
+      "id": "015",
+      "symbol": "১৫",
+      "spoken": "পনেরো"
+    },
+    {
+      "id": "016",
+      "symbol": "১৬",
+      "spoken": "ষোলো"
+    },
+    {
+      "id": "017",
+      "symbol": "১৭",
+      "spoken": "সতেরো"
+    },
+    {
+      "id": "018",
+      "symbol": "১৮",
+      "spoken": "আঠারো"
+    },
+    {
+      "id": "019",
+      "symbol": "১৯",
+      "spoken": "উনিশ"
+    },
+    {
+      "id": "020",
+      "symbol": "২০",
+      "spoken": "বিশ"
+    },
+    {
+      "id": "021",
+      "symbol": "২১",
+      "spoken": "একুশ"
+    },
+    {
+      "id": "022",
+      "symbol": "২২",
+      "spoken": "বাইশ"
+    },
+    {
+      "id": "023",
+      "symbol": "২৩",
+      "spoken": "তেইশ"
+    },
+    {
+      "id": "024",
+      "symbol": "২৪",
+      "spoken": "চব্বিশ"
+    },
+    {
+      "id": "025",
+      "symbol": "২৫",
+      "spoken": "পঁচিশ"
+    },
+    {
+      "id": "026",
+      "symbol": "২৬",
+      "spoken": "ছাব্বিশ"
+    },
+    {
+      "id": "027",
+      "symbol": "২৭",
+      "spoken": "সাতাশ"
+    },
+    {
+      "id": "028",
+      "symbol": "২৮",
+      "spoken": "আটাশ"
+    },
+    {
+      "id": "029",
+      "symbol": "২৯",
+      "spoken": "ঊনত্রিশ"
+    },
+    {
+      "id": "030",
+      "symbol": "৩০",
+      "spoken": "ত্রিশ"
+    },
+    {
+      "id": "031",
+      "symbol": "৩১",
+      "spoken": "একত্রিশ"
+    },
+    {
+      "id": "032",
+      "symbol": "৩২",
+      "spoken": "বত্রিশ"
+    },
+    {
+      "id": "033",
+      "symbol": "৩৩",
+      "spoken": "তেত্রিশ"
+    },
+    {
+      "id": "034",
+      "symbol": "৩৪",
+      "spoken": "চৌত্রিশ"
+    },
+    {
+      "id": "035",
+      "symbol": "৩৫",
+      "spoken": "পঁয়ত্রিশ"
+    },
+    {
+      "id": "036",
+      "symbol": "৩৬",
+      "spoken": "ছত্রিশ"
+    },
+    {
+      "id": "037",
+      "symbol": "৩৭",
+      "spoken": "সাঁইত্রিশ"
+    },
+    {
+      "id": "038",
+      "symbol": "৩৮",
+      "spoken": "আটত্রিশ"
+    },
+    {
+      "id": "039",
+      "symbol": "৩৯",
+      "spoken": "ঊনচল্লিশ"
+    },
+    {
+      "id": "040",
+      "symbol": "৪০",
+      "spoken": "চল্লিশ"
+    },
+    {
+      "id": "041",
+      "symbol": "৪১",
+      "spoken": "একচল্লিশ"
+    },
+    {
+      "id": "042",
+      "symbol": "৪২",
+      "spoken": "বিয়াল্লিশ"
+    },
+    {
+      "id": "043",
+      "symbol": "৪৩",
+      "spoken": "তেতাল্লিশ"
+    },
+    {
+      "id": "044",
+      "symbol": "৪৪",
+      "spoken": "চুয়াল্লিশ"
+    },
+    {
+      "id": "045",
+      "symbol": "৪৫",
+      "spoken": "পঁয়তাল্লিশ"
+    },
+    {
+      "id": "046",
+      "symbol": "৪৬",
+      "spoken": "ছেচল্লিশ"
+    },
+    {
+      "id": "047",
+      "symbol": "৪৭",
+      "spoken": "সাতচল্লিশ"
+    },
+    {
+      "id": "048",
+      "symbol": "৪৮",
+      "spoken": "আটচল্লিশ"
+    },
+    {
+      "id": "049",
+      "symbol": "৪৯",
+      "spoken": "ঊনপঞ্চাশ"
+    },
+    {
+      "id": "050",
+      "symbol": "৫০",
+      "spoken": "পঞ্চাশ"
+    },
+    {
+      "id": "051",
+      "symbol": "৫১",
+      "spoken": "একান্ন"
+    },
+    {
+      "id": "052",
+      "symbol": "৫২",
+      "spoken": "বাহান্ন"
+    },
+    {
+      "id": "053",
+      "symbol": "৫৩",
+      "spoken": "তিপ্পান্ন"
+    },
+    {
+      "id": "054",
+      "symbol": "৫৪",
+      "spoken": "চুয়ান্ন"
+    },
+    {
+      "id": "055",
+      "symbol": "৫৫",
+      "spoken": "পঞ্চান্ন"
+    },
+    {
+      "id": "056",
+      "symbol": "৫৬",
+      "spoken": "ছাপ্পান্ন"
+    },
+    {
+      "id": "057",
+      "symbol": "৫৭",
+      "spoken": "সাতান্ন"
+    },
+    {
+      "id": "058",
+      "symbol": "৫৮",
+      "spoken": "আটান্ন"
+    },
+    {
+      "id": "059",
+      "symbol": "৫৯",
+      "spoken": "ঊনষাট"
+    },
+    {
+      "id": "060",
+      "symbol": "৬০",
+      "spoken": "ষাট"
+    },
+    {
+      "id": "061",
+      "symbol": "৬১",
+      "spoken": "একষট্টি"
+    },
+    {
+      "id": "062",
+      "symbol": "৬২",
+      "spoken": "বাষট্টি"
+    },
+    {
+      "id": "063",
+      "symbol": "৬৩",
+      "spoken": "তেষট্টি"
+    },
+    {
+      "id": "064",
+      "symbol": "৬৪",
+      "spoken": "চৌষট্টি"
+    },
+    {
+      "id": "065",
+      "symbol": "৬৫",
+      "spoken": "পঁয়ষট্টি"
+    },
+    {
+      "id": "066",
+      "symbol": "৬৬",
+      "spoken": "ছেষট্টি"
+    },
+    {
+      "id": "067",
+      "symbol": "৬৭",
+      "spoken": "সাতষট্টি"
+    },
+    {
+      "id": "068",
+      "symbol": "৬৮",
+      "spoken": "আটষট্টি"
+    },
+    {
+      "id": "069",
+      "symbol": "৬৯",
+      "spoken": "ঊনসত্তর"
+    },
+    {
+      "id": "070",
+      "symbol": "৭০",
+      "spoken": "সত্তর"
+    },
+    {
+      "id": "071",
+      "symbol": "৭১",
+      "spoken": "একাত্তর"
+    },
+    {
+      "id": "072",
+      "symbol": "৭২",
+      "spoken": "বাহাত্তর"
+    },
+    {
+      "id": "073",
+      "symbol": "৭৩",
+      "spoken": "তিয়াত্তর"
+    },
+    {
+      "id": "074",
+      "symbol": "৭৪",
+      "spoken": "চুয়াত্তর"
+    },
+    {
+      "id": "075",
+      "symbol": "৭৫",
+      "spoken": "পঁচাত্তর"
+    },
+    {
+      "id": "076",
+      "symbol": "৭৬",
+      "spoken": "ছিয়াত্তর"
+    },
+    {
+      "id": "077",
+      "symbol": "৭৭",
+      "spoken": "সাতাত্তর"
+    },
+    {
+      "id": "078",
+      "symbol": "৭৮",
+      "spoken": "আটাত্তর"
+    },
+    {
+      "id": "079",
+      "symbol": "৭৯",
+      "spoken": "ঊনআশি"
+    },
+    {
+      "id": "080",
+      "symbol": "৮০",
+      "spoken": "আশি"
+    },
+    {
+      "id": "081",
+      "symbol": "৮১",
+      "spoken": "একাশি"
+    },
+    {
+      "id": "082",
+      "symbol": "৮২",
+      "spoken": "বিরাশি"
+    },
+    {
+      "id": "083",
+      "symbol": "৮৩",
+      "spoken": "তিরাশি"
+    },
+    {
+      "id": "084",
+      "symbol": "৮৪",
+      "spoken": "চুরাশি"
+    },
+    {
+      "id": "085",
+      "symbol": "৮৫",
+      "spoken": "পঁচাশি"
+    },
+    {
+      "id": "086",
+      "symbol": "৮৬",
+      "spoken": "ছিয়াশি"
+    },
+    {
+      "id": "087",
+      "symbol": "৮৭",
+      "spoken": "সাতাশি"
+    },
+    {
+      "id": "088",
+      "symbol": "৮৮",
+      "spoken": "আটাশি"
+    },
+    {
+      "id": "089",
+      "symbol": "৮৯",
+      "spoken": "ঊননব্বই"
+    },
+    {
+      "id": "090",
+      "symbol": "৯০",
+      "spoken": "নব্বই"
+    },
+    {
+      "id": "091",
+      "symbol": "৯১",
+      "spoken": "একানব্বই"
+    },
+    {
+      "id": "092",
+      "symbol": "৯২",
+      "spoken": "বিরানব্বই"
+    },
+    {
+      "id": "093",
+      "symbol": "৯৩",
+      "spoken": "তিরানব্বই"
+    },
+    {
+      "id": "094",
+      "symbol": "৯৪",
+      "spoken": "চুরানব্বই"
+    },
+    {
+      "id": "095",
+      "symbol": "৯৫",
+      "spoken": "পঁচানব্বই"
+    },
+    {
+      "id": "096",
+      "symbol": "৯৬",
+      "spoken": "ছিয়ানব্বই"
+    },
+    {
+      "id": "097",
+      "symbol": "৯৭",
+      "spoken": "সাতানব্বই"
+    },
+    {
+      "id": "098",
+      "symbol": "৯৮",
+      "spoken": "আটানব্বই"
+    },
+    {
+      "id": "099",
+      "symbol": "৯৯",
+      "spoken": "নিরানব্বই"
+    },
+    {
+      "id": "100",
+      "symbol": "১০০",
+      "spoken": "একশো"
+    }
+  ],
+  "en": [
+    {
+      "id": "001",
+      "symbol": "1",
+      "spoken": "one"
+    },
+    {
+      "id": "002",
+      "symbol": "2",
+      "spoken": "two"
+    },
+    {
+      "id": "003",
+      "symbol": "3",
+      "spoken": "three"
+    },
+    {
+      "id": "004",
+      "symbol": "4",
+      "spoken": "four"
+    },
+    {
+      "id": "005",
+      "symbol": "5",
+      "spoken": "five"
+    },
+    {
+      "id": "006",
+      "symbol": "6",
+      "spoken": "six"
+    },
+    {
+      "id": "007",
+      "symbol": "7",
+      "spoken": "seven"
+    },
+    {
+      "id": "008",
+      "symbol": "8",
+      "spoken": "eight"
+    },
+    {
+      "id": "009",
+      "symbol": "9",
+      "spoken": "nine"
+    },
+    {
+      "id": "010",
+      "symbol": "10",
+      "spoken": "ten"
+    },
+    {
+      "id": "011",
+      "symbol": "11",
+      "spoken": "eleven"
+    },
+    {
+      "id": "012",
+      "symbol": "12",
+      "spoken": "twelve"
+    },
+    {
+      "id": "013",
+      "symbol": "13",
+      "spoken": "thirteen"
+    },
+    {
+      "id": "014",
+      "symbol": "14",
+      "spoken": "fourteen"
+    },
+    {
+      "id": "015",
+      "symbol": "15",
+      "spoken": "fifteen"
+    },
+    {
+      "id": "016",
+      "symbol": "16",
+      "spoken": "sixteen"
+    },
+    {
+      "id": "017",
+      "symbol": "17",
+      "spoken": "seventeen"
+    },
+    {
+      "id": "018",
+      "symbol": "18",
+      "spoken": "eighteen"
+    },
+    {
+      "id": "019",
+      "symbol": "19",
+      "spoken": "nineteen"
+    },
+    {
+      "id": "020",
+      "symbol": "20",
+      "spoken": "twenty"
+    },
+    {
+      "id": "021",
+      "symbol": "21",
+      "spoken": "twenty-one"
+    },
+    {
+      "id": "022",
+      "symbol": "22",
+      "spoken": "twenty-two"
+    },
+    {
+      "id": "023",
+      "symbol": "23",
+      "spoken": "twenty-three"
+    },
+    {
+      "id": "024",
+      "symbol": "24",
+      "spoken": "twenty-four"
+    },
+    {
+      "id": "025",
+      "symbol": "25",
+      "spoken": "twenty-five"
+    },
+    {
+      "id": "026",
+      "symbol": "26",
+      "spoken": "twenty-six"
+    },
+    {
+      "id": "027",
+      "symbol": "27",
+      "spoken": "twenty-seven"
+    },
+    {
+      "id": "028",
+      "symbol": "28",
+      "spoken": "twenty-eight"
+    },
+    {
+      "id": "029",
+      "symbol": "29",
+      "spoken": "twenty-nine"
+    },
+    {
+      "id": "030",
+      "symbol": "30",
+      "spoken": "thirty"
+    },
+    {
+      "id": "031",
+      "symbol": "31",
+      "spoken": "thirty-one"
+    },
+    {
+      "id": "032",
+      "symbol": "32",
+      "spoken": "thirty-two"
+    },
+    {
+      "id": "033",
+      "symbol": "33",
+      "spoken": "thirty-three"
+    },
+    {
+      "id": "034",
+      "symbol": "34",
+      "spoken": "thirty-four"
+    },
+    {
+      "id": "035",
+      "symbol": "35",
+      "spoken": "thirty-five"
+    },
+    {
+      "id": "036",
+      "symbol": "36",
+      "spoken": "thirty-six"
+    },
+    {
+      "id": "037",
+      "symbol": "37",
+      "spoken": "thirty-seven"
+    },
+    {
+      "id": "038",
+      "symbol": "38",
+      "spoken": "thirty-eight"
+    },
+    {
+      "id": "039",
+      "symbol": "39",
+      "spoken": "thirty-nine"
+    },
+    {
+      "id": "040",
+      "symbol": "40",
+      "spoken": "forty"
+    },
+    {
+      "id": "041",
+      "symbol": "41",
+      "spoken": "forty-one"
+    },
+    {
+      "id": "042",
+      "symbol": "42",
+      "spoken": "forty-two"
+    },
+    {
+      "id": "043",
+      "symbol": "43",
+      "spoken": "forty-three"
+    },
+    {
+      "id": "044",
+      "symbol": "44",
+      "spoken": "forty-four"
+    },
+    {
+      "id": "045",
+      "symbol": "45",
+      "spoken": "forty-five"
+    },
+    {
+      "id": "046",
+      "symbol": "46",
+      "spoken": "forty-six"
+    },
+    {
+      "id": "047",
+      "symbol": "47",
+      "spoken": "forty-seven"
+    },
+    {
+      "id": "048",
+      "symbol": "48",
+      "spoken": "forty-eight"
+    },
+    {
+      "id": "049",
+      "symbol": "49",
+      "spoken": "forty-nine"
+    },
+    {
+      "id": "050",
+      "symbol": "50",
+      "spoken": "fifty"
+    },
+    {
+      "id": "051",
+      "symbol": "51",
+      "spoken": "fifty-one"
+    },
+    {
+      "id": "052",
+      "symbol": "52",
+      "spoken": "fifty-two"
+    },
+    {
+      "id": "053",
+      "symbol": "53",
+      "spoken": "fifty-three"
+    },
+    {
+      "id": "054",
+      "symbol": "54",
+      "spoken": "fifty-four"
+    },
+    {
+      "id": "055",
+      "symbol": "55",
+      "spoken": "fifty-five"
+    },
+    {
+      "id": "056",
+      "symbol": "56",
+      "spoken": "fifty-six"
+    },
+    {
+      "id": "057",
+      "symbol": "57",
+      "spoken": "fifty-seven"
+    },
+    {
+      "id": "058",
+      "symbol": "58",
+      "spoken": "fifty-eight"
+    },
+    {
+      "id": "059",
+      "symbol": "59",
+      "spoken": "fifty-nine"
+    },
+    {
+      "id": "060",
+      "symbol": "60",
+      "spoken": "sixty"
+    },
+    {
+      "id": "061",
+      "symbol": "61",
+      "spoken": "sixty-one"
+    },
+    {
+      "id": "062",
+      "symbol": "62",
+      "spoken": "sixty-two"
+    },
+    {
+      "id": "063",
+      "symbol": "63",
+      "spoken": "sixty-three"
+    },
+    {
+      "id": "064",
+      "symbol": "64",
+      "spoken": "sixty-four"
+    },
+    {
+      "id": "065",
+      "symbol": "65",
+      "spoken": "sixty-five"
+    },
+    {
+      "id": "066",
+      "symbol": "66",
+      "spoken": "sixty-six"
+    },
+    {
+      "id": "067",
+      "symbol": "67",
+      "spoken": "sixty-seven"
+    },
+    {
+      "id": "068",
+      "symbol": "68",
+      "spoken": "sixty-eight"
+    },
+    {
+      "id": "069",
+      "symbol": "69",
+      "spoken": "sixty-nine"
+    },
+    {
+      "id": "070",
+      "symbol": "70",
+      "spoken": "seventy"
+    },
+    {
+      "id": "071",
+      "symbol": "71",
+      "spoken": "seventy-one"
+    },
+    {
+      "id": "072",
+      "symbol": "72",
+      "spoken": "seventy-two"
+    },
+    {
+      "id": "073",
+      "symbol": "73",
+      "spoken": "seventy-three"
+    },
+    {
+      "id": "074",
+      "symbol": "74",
+      "spoken": "seventy-four"
+    },
+    {
+      "id": "075",
+      "symbol": "75",
+      "spoken": "seventy-five"
+    },
+    {
+      "id": "076",
+      "symbol": "76",
+      "spoken": "seventy-six"
+    },
+    {
+      "id": "077",
+      "symbol": "77",
+      "spoken": "seventy-seven"
+    },
+    {
+      "id": "078",
+      "symbol": "78",
+      "spoken": "seventy-eight"
+    },
+    {
+      "id": "079",
+      "symbol": "79",
+      "spoken": "seventy-nine"
+    },
+    {
+      "id": "080",
+      "symbol": "80",
+      "spoken": "eighty"
+    },
+    {
+      "id": "081",
+      "symbol": "81",
+      "spoken": "eighty-one"
+    },
+    {
+      "id": "082",
+      "symbol": "82",
+      "spoken": "eighty-two"
+    },
+    {
+      "id": "083",
+      "symbol": "83",
+      "spoken": "eighty-three"
+    },
+    {
+      "id": "084",
+      "symbol": "84",
+      "spoken": "eighty-four"
+    },
+    {
+      "id": "085",
+      "symbol": "85",
+      "spoken": "eighty-five"
+    },
+    {
+      "id": "086",
+      "symbol": "86",
+      "spoken": "eighty-six"
+    },
+    {
+      "id": "087",
+      "symbol": "87",
+      "spoken": "eighty-seven"
+    },
+    {
+      "id": "088",
+      "symbol": "88",
+      "spoken": "eighty-eight"
+    },
+    {
+      "id": "089",
+      "symbol": "89",
+      "spoken": "eighty-nine"
+    },
+    {
+      "id": "090",
+      "symbol": "90",
+      "spoken": "ninety"
+    },
+    {
+      "id": "091",
+      "symbol": "91",
+      "spoken": "ninety-one"
+    },
+    {
+      "id": "092",
+      "symbol": "92",
+      "spoken": "ninety-two"
+    },
+    {
+      "id": "093",
+      "symbol": "93",
+      "spoken": "ninety-three"
+    },
+    {
+      "id": "094",
+      "symbol": "94",
+      "spoken": "ninety-four"
+    },
+    {
+      "id": "095",
+      "symbol": "95",
+      "spoken": "ninety-five"
+    },
+    {
+      "id": "096",
+      "symbol": "96",
+      "spoken": "ninety-six"
+    },
+    {
+      "id": "097",
+      "symbol": "97",
+      "spoken": "ninety-seven"
+    },
+    {
+      "id": "098",
+      "symbol": "98",
+      "spoken": "ninety-eight"
+    },
+    {
+      "id": "099",
+      "symbol": "99",
+      "spoken": "ninety-nine"
+    },
+    {
+      "id": "100",
+      "symbol": "100",
+      "spoken": "one hundred"
+    }
+  ]
+}

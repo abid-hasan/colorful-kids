@@ -1,8 +1,9 @@
+import numberData from './numbers.json';
 import alphabetData from './alphabets.json';
 import { colors } from './colors';
 import type { Language } from './i18n';
 
-export type SubjectId = 'colors' | 'bn' | 'en' | 'ar';
+export type SubjectId = 'colors' | 'bn' | 'en' | 'ar' | 'numbers-bn' | 'numbers-en';
 export type Item = { id: string; symbol: string; spoken: string; audio: string; hex?: string };
 export type Subject = { id: SubjectId; title: Record<Language, string>; sample: string; items: (language: Language) => Item[] };
 export const subjects: Subject[] = [
@@ -11,5 +12,11 @@ export const subjects: Subject[] = [
     id, title: { bn: id === 'bn' ? 'বাংলা' : id === 'en' ? 'ইংরেজি' : 'আরবি', en: id === 'bn' ? 'Bangla' : id === 'en' ? 'English' : 'Arabic' },
     sample: id === 'bn' ? 'অ আ' : id === 'en' ? 'A B' : 'ا ب',
     items: () => alphabetData[id].map(e => ({ ...e, audio: `audio/alphabets/${id}/${e.id}.mp3?v=8` })),
+  })),
+  ...(['bn', 'en'] as const).map(language => ({
+    id: `numbers-${language}` as SubjectId,
+    title: { bn: language === 'bn' ? 'বাংলা সংখ্যা' : 'ইংরেজি সংখ্যা', en: language === 'bn' ? 'Bangla Numbers' : 'English Numbers' },
+    sample: language === 'bn' ? '১ ২ ৩' : '1 2 3',
+    items: () => numberData[language].map(item => ({ ...item, audio: `audio/numbers/${language}/${item.id}.mp3?v=1` })),
   })),
 ];

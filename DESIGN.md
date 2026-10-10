@@ -237,3 +237,6 @@ Warm cream ground, ivory cards, dark botanical ink, deep teal actions. Bangla us
 - `--soft`: `#e4ede5`
 - `--green`: `#24734b`
 - `--gold`: `#f2ca56`
+
+
+সংখ্যা: বাংলা ১–১০০ ও English 1–100 আলাদা বিষয়। শেখায় সংখ্যা ও বানান, কুইজে প্রথমে শুধু সংখ্যা এবং উত্তরের পরে সঠিকটির বানান। সব ২০০টি Gero ক্লিপ bundled; রং ও বর্ণে উচ্চারণের টেক্সট যোগ হয়নি। হোমে ছয় বিষয়ের সমান grid, desktop তিন column ও mobile দুই column।

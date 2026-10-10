@@ -32,6 +32,8 @@ const t = () => messages[language];
 const subject = () => subjects.find(s => s.id === subjectId)!;
 const pool = () => subject().items(language);
 const number = (n: number) => n.toLocaleString(language === 'bn' ? 'bn-BD' : 'en-US');
+const isNumbers = () => subjectId.startsWith('numbers-');
+const contentLanguage = () => isNumbers() ? subjectId.slice(-2) : subjectId;
 const title = () => subject().title[language];
 const delay = (ms: number) => new Promise<void>(resolve => setTimeout(resolve, ms));
 const escape = (text: string) => text.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
@@ -52,13 +54,13 @@ function glyph(item: Item) {
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><rect width="160" height="160" fill="${item.hex}"/></svg>`;
     return `<img class="color-face ${item.id === 'white' ? 'white-face' : ''}" src="data:image/svg+xml,${encodeURIComponent(svg)}" width="160" height="160" alt="" draggable="false">`;
   }
-  return `<span class="letter" lang="${subjectId}" dir="${subjectId === 'ar' ? 'rtl' : 'ltr'}">${escape(item.symbol)}</span>`;
+  return `<span class="letter ${isNumbers() ? 'number-glyph' : ''}" lang="${contentLanguage()}" dir="${subjectId === 'ar' ? 'rtl' : 'ltr'}">${escape(item.symbol)}</span>`;
 }
 function header() {
   return `<header class="site-header"><button class="brand" data-action="home" aria-label="${t().home}">${logo()}<span lang="en">Colorful Kids</span></button><div class="language-switch" role="group" aria-label="${t().language}">${(['bn','en'] as const).map(l => `<button lang="${l}" data-action="language" data-value="${l}" aria-pressed="${language === l}">${l === 'bn' ? 'বাংলা' : 'English'}</button>`).join('')}</div></header>`;
 }
 function home() {
-  return `<section class="home"><h1>${t().pick}</h1><div class="subject-shelf">${subjects.map(s => `<button class="subject-door subject-${s.id}" data-action="subject" data-value="${s.id}"><span class="subject-art" aria-hidden="true">${s.id === 'colors' ? '<span class="color-stack"><i></i><i></i><i></i></span>' : `<span lang="${s.id}" dir="${s.id === 'ar' ? 'rtl' : 'ltr'}">${s.sample}</span>`}</span><span class="subject-title">${s.title[language]}${icon('arrow')}</span></button>`).join('')}</div></section>`;
+  return `<section class="home"><h1>${t().pick}</h1><div class="subject-shelf">${subjects.map(s => `<button class="subject-door subject-${s.id}" data-action="subject" data-value="${s.id}"><span class="subject-art" aria-hidden="true">${s.id === 'colors' ? '<span class="color-stack"><i></i><i></i><i></i></span>' : `<span lang="${s.id.startsWith('numbers-') ? s.id.slice(-2) : s.id}" dir="${s.id === 'ar' ? 'rtl' : 'ltr'}">${s.sample}</span>`}</span><span class="subject-title">${s.title[language]}${icon('arrow')}</span></button>`).join('')}</div></section>`;
 }
 function navigation() {
   return `<div class="activity-heading"><button class="icon-button" data-action="home" aria-label="${t().home}">${icon('back')}</button><h1>${title()}</h1><nav class="mode-tabs" aria-label="${title()}"><button data-action="learn" aria-current="${page === 'learn' ? 'page' : 'false'}">${icon('sound')}${t().learn}</button><button data-action="start" aria-current="${page !== 'learn' ? 'page' : 'false'}">${icon('play')}${t().play}</button></nav></div>`;
@@ -70,7 +72,7 @@ function tile(item: Item, index: number, mode: 'learn' | 'choice') {
   const wrong = phase === 'wrong' && item.id === selectedId && mode === 'choice';
   const isSpeaking = speaking && activeId === item.id && mode === 'learn';
   const disabled = mode === 'choice' && ((!['ready','speaking'].includes(phase) && !shown) || paused);
-  return `<button class="learning-tile ${item.hex ? 'color-tile' : 'letter-tile'} ${correct ? 'is-correct' : ''} ${shown ? 'is-revealed' : teaching ? 'is-muted' : ''} ${wrong ? 'is-wrong' : ''} ${isSpeaking ? 'is-speaking' : ''}" data-action="${mode === 'learn' ? 'hear' : shown ? 'replay' : 'choose'}" data-value="${item.id}" aria-label="${escape(mode === 'learn' || shown ? item.spoken : `${t().option} ${number(index + 1)}`)}" ${disabled ? 'disabled' : ''}><span class="tile-face">${glyph(item)}${correct || shown ? `<span class="answer-mark">${icon('check')}</span>` : wrong ? `<span class="answer-mark">${icon('sound')}</span>` : ''}</span>${mode === 'learn' ? `<span class="tile-label">${icon('sound')}${hasHeard(item) ? `<span class="heard" aria-label="${t().seen}">${icon('check')}</span>` : ''}</span>` : ''}</button>`;
+  return `<button class="learning-tile ${item.hex ? 'color-tile' : 'letter-tile'} ${correct ? 'is-correct' : ''} ${shown ? 'is-revealed' : teaching ? 'is-muted' : ''} ${wrong ? 'is-wrong' : ''} ${isSpeaking ? 'is-speaking' : ''}" data-action="${mode === 'learn' ? 'hear' : shown ? 'replay' : 'choose'}" data-value="${item.id}" aria-label="${escape(mode === 'learn' || shown ? item.spoken : `${t().option} ${number(index + 1)}`)}" ${disabled ? 'disabled' : ''}><span class="tile-face">${glyph(item)}${correct || shown ? `<span class="answer-mark">${icon('check')}</span>` : wrong ? `<span class="answer-mark">${icon('sound')}</span>` : ''}</span>${isNumbers() ? `<span class="number-spelling" lang="${contentLanguage()}">${mode === 'learn' || shown || correct ? escape(item.spoken) : ''}</span>` : ''}${mode === 'learn' ? `<span class="tile-label">${icon('sound')}${hasHeard(item) ? `<span class="heard" aria-label="${t().seen}">${icon('check')}</span>` : ''}</span>` : ''}</button>`;
 }
 function learn() {
   return `${navigation()}<section class="learning-board"><div class="learn-top"><p>${phase === 'error' ? t().error : t().touch}</p></div><div class="learning-grid ${subjectId === 'colors' ? 'all-colors' : ''}" dir="${subjectId === 'ar' ? 'rtl' : 'ltr'}">${pool().map((item,i) => tile(item,i,'learn')).join('')}</div><div class="learn-bottom"><button class="primary" data-action="start">${t().start}${icon('play')}</button></div></section>`;
@@ -83,7 +85,7 @@ function progress() {
 }
 function game() {
   const reveal = phase === 'reveal' || (phase === 'error' && errorContext === 'reveal');
-  return `${navigation()}<section class="game-board"><div class="game-meta"><span>${t().round} ${number(Math.min(results.length + 1,5))} / ${number(5)}</span><button class="icon-button" data-action="pause" aria-label="${t().pause}">${icon('pause')}</button></div>${paused ? `<div class="paused-state"><h2>${t().paused}</h2><button class="primary" data-action="resume">${icon('play')}${t().resume}</button></div>` : `<h2>${reveal ? t().remember : subjectId === 'colors' ? t().findColor : t().findLetter}</h2>${replayButton()}<div class="choice-grid">${choices.map((item,i) => tile(item,i,'choice')).join('')}</div><div class="feedback" role="status">${phase === 'error' ? t().error : reveal ? '' : phase === 'correct' ? t().correct : phase === 'wrong' ? t().remember : ''}</div>${reveal ? `<button class="primary next-button" data-action="continue" ${speaking || phase === 'error' ? 'disabled' : ''}>${t().next}${icon('arrow')}</button>` : ''}${progress()}`}</section>`;
+  return `${navigation()}<section class="game-board"><div class="game-meta"><span>${t().round} ${number(Math.min(results.length + 1,5))} / ${number(5)}</span><button class="icon-button" data-action="pause" aria-label="${t().pause}">${icon('pause')}</button></div>${paused ? `<div class="paused-state"><h2>${t().paused}</h2><button class="primary" data-action="resume">${icon('play')}${t().resume}</button></div>` : `<h2>${reveal ? t().remember : subjectId === 'colors' ? t().findColor : isNumbers() ? t().findNumber : t().findLetter}</h2>${replayButton()}<div class="choice-grid">${choices.map((item,i) => tile(item,i,'choice')).join('')}</div><div class="feedback" role="status">${phase === 'error' ? t().error : reveal ? '' : phase === 'correct' ? t().correct : phase === 'wrong' ? t().remember : ''}</div>${reveal ? `<button class="primary next-button" data-action="continue" ${speaking || phase === 'error' ? 'disabled' : ''}>${t().next}${icon('arrow')}</button>` : ''}${progress()}`}</section>`;
 }
 function finish() {
   const independent = results.filter(r => r.independent).length;
