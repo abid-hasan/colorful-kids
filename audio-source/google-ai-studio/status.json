@@ -1,0 +1,10 @@
+{
+  "status": "complete; installed in public/audio",
+  "voice": "Gero",
+  "model": "gemini-3.8-flash-tts",
+  "clips": 26,
+  "remaining": [],
+  "sourceFormat": "WAV",
+  "appFormat": "mono MP3 24 kHz 96 kbps",
+  "verification": "All 26 WAVs have complete duration and non-silent signal. All MP3s decode successfully. No subjective pronunciation guarantee."
+}

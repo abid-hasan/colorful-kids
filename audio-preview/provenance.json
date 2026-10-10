@@ -1,0 +1,31 @@
+{
+  "generator": "scripts/generate_voice_preview.py",
+  "sources": {
+    "ben": {
+      "model": "facebook/mms-tts-ben",
+      "url": "https://huggingface.co/facebook/mms-tts-ben",
+      "revision": "0da99de6074c8829121cdabfbdba423af18e8e56",
+      "model_license": "CC-BY-NC-4.0"
+    },
+    "eng": {
+      "model": "facebook/mms-tts-eng",
+      "url": "https://huggingface.co/facebook/mms-tts-eng",
+      "revision": "c71de0fe7204c83f1c10820a7d696d0b450048ba",
+      "model_license": "CC-BY-NC-4.0"
+    }
+  },
+  "seed": 42,
+  "speaking_rate": 0.9,
+  "processing": "Peak normalization, 550ms language gap, MP3 encoding",
+  "texts": {
+    "red": {
+      "ben": "লাল রং খুঁজে বের করো।",
+      "eng": "Find red."
+    },
+    "blue": {
+      "ben": "নীল রং খুঁজে বের করো।",
+      "eng": "Find blue."
+    }
+  },
+  "review_status": "Generated preview; pronunciation needs listening review"
+}

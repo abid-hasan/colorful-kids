@@ -1,0 +1,561 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-10T10:53:30.992079+00:00",
+  "title": "Design System: রঙের খেলা · Colorful Kids",
+  "extensions": {
+    "colorMeta": {
+      "purple": {
+        "role": "primary",
+        "displayName": "purple",
+        "tonalRamp": [
+          "oklch(15% 0.1608 296.54)",
+          "oklch(26% 0.1608 296.54)",
+          "oklch(38% 0.1608 296.54)",
+          "oklch(49% 0.1608 296.54)",
+          "oklch(61% 0.1608 296.54)",
+          "oklch(72% 0.1608 296.54)",
+          "oklch(84% 0.1608 296.54)",
+          "oklch(95% 0.1608 296.54)"
+        ]
+      },
+      "purple-dark": {
+        "role": "primary",
+        "displayName": "purple-dark",
+        "tonalRamp": [
+          "oklch(15% 0.1549 295.59)",
+          "oklch(26% 0.1549 295.59)",
+          "oklch(38% 0.1549 295.59)",
+          "oklch(49% 0.1549 295.59)",
+          "oklch(61% 0.1549 295.59)",
+          "oklch(72% 0.1549 295.59)",
+          "oklch(84% 0.1549 295.59)",
+          "oklch(95% 0.1549 295.59)"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "ink",
+        "tonalRamp": [
+          "oklch(15% 0.0506 296.36)",
+          "oklch(26% 0.0506 296.36)",
+          "oklch(38% 0.0506 296.36)",
+          "oklch(49% 0.0506 296.36)",
+          "oklch(61% 0.0506 296.36)",
+          "oklch(72% 0.0506 296.36)",
+          "oklch(84% 0.0506 296.36)",
+          "oklch(95% 0.0506 296.36)"
+        ]
+      },
+      "muted": {
+        "role": "neutral",
+        "displayName": "muted",
+        "tonalRamp": [
+          "oklch(15% 0.0455 304.38)",
+          "oklch(26% 0.0455 304.38)",
+          "oklch(38% 0.0455 304.38)",
+          "oklch(49% 0.0455 304.38)",
+          "oklch(61% 0.0455 304.38)",
+          "oklch(72% 0.0455 304.38)",
+          "oklch(84% 0.0455 304.38)",
+          "oklch(95% 0.0455 304.38)"
+        ]
+      },
+      "paper": {
+        "role": "neutral",
+        "displayName": "paper",
+        "tonalRamp": [
+          "oklch(15% 0.0054 95.10)",
+          "oklch(26% 0.0054 95.10)",
+          "oklch(38% 0.0054 95.10)",
+          "oklch(49% 0.0054 95.10)",
+          "oklch(61% 0.0054 95.10)",
+          "oklch(72% 0.0054 95.10)",
+          "oklch(84% 0.0054 95.10)",
+          "oklch(95% 0.0054 95.10)"
+        ]
+      },
+      "ground": {
+        "role": "neutral",
+        "displayName": "ground",
+        "tonalRamp": [
+          "oklch(15% 0.0152 302.56)",
+          "oklch(26% 0.0152 302.56)",
+          "oklch(38% 0.0152 302.56)",
+          "oklch(49% 0.0152 302.56)",
+          "oklch(61% 0.0152 302.56)",
+          "oklch(72% 0.0152 302.56)",
+          "oklch(84% 0.0152 302.56)",
+          "oklch(95% 0.0152 302.56)"
+        ]
+      },
+      "caption": {
+        "role": "neutral",
+        "displayName": "caption",
+        "tonalRamp": [
+          "oklch(15% 0.0582 83.36)",
+          "oklch(26% 0.0582 83.36)",
+          "oklch(38% 0.0582 83.36)",
+          "oklch(49% 0.0582 83.36)",
+          "oklch(61% 0.0582 83.36)",
+          "oklch(72% 0.0582 83.36)",
+          "oklch(84% 0.0582 83.36)",
+          "oklch(95% 0.0582 83.36)"
+        ]
+      },
+      "white": {
+        "role": "neutral",
+        "displayName": "white",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      },
+      "language-track": {
+        "role": "neutral",
+        "displayName": "language-track",
+        "tonalRamp": [
+          "oklch(15% 0.0240 304.48)",
+          "oklch(26% 0.0240 304.48)",
+          "oklch(38% 0.0240 304.48)",
+          "oklch(49% 0.0240 304.48)",
+          "oklch(61% 0.0240 304.48)",
+          "oklch(72% 0.0240 304.48)",
+          "oklch(84% 0.0240 304.48)",
+          "oklch(95% 0.0240 304.48)"
+        ]
+      },
+      "tab-active": {
+        "role": "neutral",
+        "displayName": "tab-active",
+        "tonalRamp": [
+          "oklch(15% 0.0382 304.06)",
+          "oklch(26% 0.0382 304.06)",
+          "oklch(38% 0.0382 304.06)",
+          "oklch(49% 0.0382 304.06)",
+          "oklch(61% 0.0382 304.06)",
+          "oklch(72% 0.0382 304.06)",
+          "oklch(84% 0.0382 304.06)",
+          "oklch(95% 0.0382 304.06)"
+        ]
+      },
+      "listen": {
+        "role": "neutral",
+        "displayName": "listen",
+        "tonalRamp": [
+          "oklch(15% 0.0297 305.11)",
+          "oklch(26% 0.0297 305.11)",
+          "oklch(38% 0.0297 305.11)",
+          "oklch(49% 0.0297 305.11)",
+          "oklch(61% 0.0297 305.11)",
+          "oklch(72% 0.0297 305.11)",
+          "oklch(84% 0.0297 305.11)",
+          "oklch(95% 0.0297 305.11)"
+        ]
+      },
+      "listen-hover": {
+        "role": "neutral",
+        "displayName": "listen-hover",
+        "tonalRamp": [
+          "oklch(15% 0.0518 305.44)",
+          "oklch(26% 0.0518 305.44)",
+          "oklch(38% 0.0518 305.44)",
+          "oklch(49% 0.0518 305.44)",
+          "oklch(61% 0.0518 305.44)",
+          "oklch(72% 0.0518 305.44)",
+          "oklch(84% 0.0518 305.44)",
+          "oklch(95% 0.0518 305.44)"
+        ]
+      },
+      "focus": {
+        "role": "neutral",
+        "displayName": "focus",
+        "tonalRamp": [
+          "oklch(15% 0.1640 295.42)",
+          "oklch(26% 0.1640 295.42)",
+          "oklch(38% 0.1640 295.42)",
+          "oklch(49% 0.1640 295.42)",
+          "oklch(61% 0.1640 295.42)",
+          "oklch(72% 0.1640 295.42)",
+          "oklch(84% 0.1640 295.42)",
+          "oklch(95% 0.1640 295.42)"
+        ]
+      },
+      "correct": {
+        "role": "neutral",
+        "displayName": "correct",
+        "tonalRamp": [
+          "oklch(15% 0.1000 157.23)",
+          "oklch(26% 0.1000 157.23)",
+          "oklch(38% 0.1000 157.23)",
+          "oklch(49% 0.1000 157.23)",
+          "oklch(61% 0.1000 157.23)",
+          "oklch(72% 0.1000 157.23)",
+          "oklch(84% 0.1000 157.23)",
+          "oklch(95% 0.1000 157.23)"
+        ]
+      },
+      "wrong": {
+        "role": "neutral",
+        "displayName": "wrong",
+        "tonalRamp": [
+          "oklch(15% 0.1030 72.64)",
+          "oklch(26% 0.1030 72.64)",
+          "oklch(38% 0.1030 72.64)",
+          "oklch(49% 0.1030 72.64)",
+          "oklch(61% 0.1030 72.64)",
+          "oklch(72% 0.1030 72.64)",
+          "oklch(84% 0.1030 72.64)",
+          "oklch(95% 0.1030 72.64)"
+        ]
+      },
+      "error": {
+        "role": "neutral",
+        "displayName": "error",
+        "tonalRamp": [
+          "oklch(15% 0.1282 17.00)",
+          "oklch(26% 0.1282 17.00)",
+          "oklch(38% 0.1282 17.00)",
+          "oklch(49% 0.1282 17.00)",
+          "oklch(61% 0.1282 17.00)",
+          "oklch(72% 0.1282 17.00)",
+          "oklch(84% 0.1282 17.00)",
+          "oklch(95% 0.1282 17.00)"
+        ]
+      },
+      "star-fill": {
+        "role": "neutral",
+        "displayName": "star-fill",
+        "tonalRamp": [
+          "oklch(15% 0.1397 89.98)",
+          "oklch(26% 0.1397 89.98)",
+          "oklch(38% 0.1397 89.98)",
+          "oklch(49% 0.1397 89.98)",
+          "oklch(61% 0.1397 89.98)",
+          "oklch(72% 0.1397 89.98)",
+          "oklch(84% 0.1397 89.98)",
+          "oklch(95% 0.1397 89.98)"
+        ]
+      },
+      "star-stroke": {
+        "role": "neutral",
+        "displayName": "star-stroke",
+        "tonalRamp": [
+          "oklch(15% 0.1334 83.48)",
+          "oklch(26% 0.1334 83.48)",
+          "oklch(38% 0.1334 83.48)",
+          "oklch(49% 0.1334 83.48)",
+          "oklch(61% 0.1334 83.48)",
+          "oklch(72% 0.1334 83.48)",
+          "oklch(84% 0.1334 83.48)",
+          "oklch(95% 0.1334 83.48)"
+        ]
+      },
+      "swatch-red": {
+        "role": "secondary",
+        "displayName": "swatch-red",
+        "tonalRamp": [
+          "oklch(15% 0.1995 18.84)",
+          "oklch(26% 0.1995 18.84)",
+          "oklch(38% 0.1995 18.84)",
+          "oklch(49% 0.1995 18.84)",
+          "oklch(61% 0.1995 18.84)",
+          "oklch(72% 0.1995 18.84)",
+          "oklch(84% 0.1995 18.84)",
+          "oklch(95% 0.1995 18.84)"
+        ]
+      },
+      "swatch-blue": {
+        "role": "secondary",
+        "displayName": "swatch-blue",
+        "tonalRamp": [
+          "oklch(15% 0.1674 256.46)",
+          "oklch(26% 0.1674 256.46)",
+          "oklch(38% 0.1674 256.46)",
+          "oklch(49% 0.1674 256.46)",
+          "oklch(61% 0.1674 256.46)",
+          "oklch(72% 0.1674 256.46)",
+          "oklch(84% 0.1674 256.46)",
+          "oklch(95% 0.1674 256.46)"
+        ]
+      },
+      "swatch-yellow": {
+        "role": "secondary",
+        "displayName": "swatch-yellow",
+        "tonalRamp": [
+          "oklch(15% 0.1530 89.12)",
+          "oklch(26% 0.1530 89.12)",
+          "oklch(38% 0.1530 89.12)",
+          "oklch(49% 0.1530 89.12)",
+          "oklch(61% 0.1530 89.12)",
+          "oklch(72% 0.1530 89.12)",
+          "oklch(84% 0.1530 89.12)",
+          "oklch(95% 0.1530 89.12)"
+        ]
+      },
+      "swatch-green": {
+        "role": "secondary",
+        "displayName": "swatch-green",
+        "tonalRamp": [
+          "oklch(15% 0.1319 158.31)",
+          "oklch(26% 0.1319 158.31)",
+          "oklch(38% 0.1319 158.31)",
+          "oklch(49% 0.1319 158.31)",
+          "oklch(61% 0.1319 158.31)",
+          "oklch(72% 0.1319 158.31)",
+          "oklch(84% 0.1319 158.31)",
+          "oklch(95% 0.1319 158.31)"
+        ]
+      },
+      "swatch-orange": {
+        "role": "secondary",
+        "displayName": "swatch-orange",
+        "tonalRamp": [
+          "oklch(15% 0.1564 56.27)",
+          "oklch(26% 0.1564 56.27)",
+          "oklch(38% 0.1564 56.27)",
+          "oklch(49% 0.1564 56.27)",
+          "oklch(61% 0.1564 56.27)",
+          "oklch(72% 0.1564 56.27)",
+          "oklch(84% 0.1564 56.27)",
+          "oklch(95% 0.1564 56.27)"
+        ]
+      },
+      "swatch-purple": {
+        "role": "secondary",
+        "displayName": "swatch-purple",
+        "tonalRamp": [
+          "oklch(15% 0.1679 303.31)",
+          "oklch(26% 0.1679 303.31)",
+          "oklch(38% 0.1679 303.31)",
+          "oklch(49% 0.1679 303.31)",
+          "oklch(61% 0.1679 303.31)",
+          "oklch(72% 0.1679 303.31)",
+          "oklch(84% 0.1679 303.31)",
+          "oklch(95% 0.1679 303.31)"
+        ]
+      },
+      "swatch-pink": {
+        "role": "secondary",
+        "displayName": "swatch-pink",
+        "tonalRamp": [
+          "oklch(15% 0.1261 354.31)",
+          "oklch(26% 0.1261 354.31)",
+          "oklch(38% 0.1261 354.31)",
+          "oklch(49% 0.1261 354.31)",
+          "oklch(61% 0.1261 354.31)",
+          "oklch(72% 0.1261 354.31)",
+          "oklch(84% 0.1261 354.31)",
+          "oklch(95% 0.1261 354.31)"
+        ]
+      },
+      "swatch-brown": {
+        "role": "secondary",
+        "displayName": "swatch-brown",
+        "tonalRamp": [
+          "oklch(15% 0.0833 51.27)",
+          "oklch(26% 0.0833 51.27)",
+          "oklch(38% 0.0833 51.27)",
+          "oklch(49% 0.0833 51.27)",
+          "oklch(61% 0.0833 51.27)",
+          "oklch(72% 0.0833 51.27)",
+          "oklch(84% 0.0833 51.27)",
+          "oklch(95% 0.0833 51.27)"
+        ]
+      },
+      "swatch-black": {
+        "role": "secondary",
+        "displayName": "swatch-black",
+        "tonalRamp": [
+          "oklch(15% 0.0160 285.44)",
+          "oklch(26% 0.0160 285.44)",
+          "oklch(38% 0.0160 285.44)",
+          "oklch(49% 0.0160 285.44)",
+          "oklch(61% 0.0160 285.44)",
+          "oklch(72% 0.0160 285.44)",
+          "oklch(84% 0.0160 285.44)",
+          "oklch(95% 0.0160 285.44)"
+        ]
+      },
+      "swatch-white": {
+        "role": "secondary",
+        "displayName": "swatch-white",
+        "tonalRamp": [
+          "oklch(15% 0.0000 89.88)",
+          "oklch(26% 0.0000 89.88)",
+          "oklch(38% 0.0000 89.88)",
+          "oklch(49% 0.0000 89.88)",
+          "oklch(61% 0.0000 89.88)",
+          "oklch(72% 0.0000 89.88)",
+          "oklch(84% 0.0000 89.88)",
+          "oklch(95% 0.0000 89.88)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "বাংলা স্বাগত",
+        "purpose": "স্বাগত পাতার প্রধান শিরোনাম।"
+      },
+      "display-en": {
+        "displayName": "English welcome",
+        "purpose": "ইংরেজি ভাষার স্বাগত শিরোনাম।"
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet",
+        "value": "0 12px 50px #64527606",
+        "purpose": "স্বাগত পাতা"
+      },
+      {
+        "name": "sticker",
+        "value": "0 8px 16px #30284414",
+        "purpose": "রঙের স্টিকার"
+      },
+      {
+        "name": "action",
+        "value": "0 6px 15px #7550ba22",
+        "purpose": "মূল action"
+      },
+      {
+        "name": "dialog",
+        "value": "0 22px 90px #2e1a4940",
+        "purpose": "Settings dialog"
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "স্টিকার ওঠা ও তারা জমা।"
+      },
+      {
+        "name": "correct",
+        "value": "0.65s",
+        "purpose": "সঠিক স্টিকারের pop।"
+      },
+      {
+        "name": "wrong",
+        "value": "0.45s ease-in-out",
+        "purpose": "ভুলের কোমল দুলুনি।"
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "compact",
+        "value": "360px"
+      },
+      {
+        "name": "mobile",
+        "value": "600px"
+      },
+      {
+        "name": "tablet",
+        "value": "850px"
+      },
+      {
+        "name": "wide",
+        "value": "1400px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "মূল action",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "মূল action — বর্তমান UI থেকে নেওয়া দৃশ্যমান ধরন।",
+      "html": "<button class=\"ds-primary\">খেলা শুরু <svg width=\"24\" height=\"24\" viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\" aria-hidden=\"true\"><path d=\"M5 12h14m-6-6 6 6-6 6\"/></svg></button>",
+      "css": ".ds-primary{display:inline-flex;align-items:center;justify-content:center;gap:15px;font-family:Baloo,Nunito,sans-serif;cursor:pointer;background:var(--purple,#7550ba);color:white;border:0;border-radius:16px;padding:13px 30px;min-height:58px;font-size:19px;font-weight:700;box-shadow:0 6px 15px #7550ba22;transition:background .2s,transform .25s cubic-bezier(.16,1,.3,1)}.ds-primary:hover{background:var(--purple-dark,#5e3b9f);transform:translateY(-2px)}.ds-primary:active{transform:translateY(1px)}.ds-primary:focus-visible{outline:3px solid var(--purple,#7550ba);outline-offset:5px}"
+    },
+    {
+      "name": "আবার শোনা",
+      "kind": "button",
+      "refersTo": "button-listen",
+      "description": "আবার শোনা — বর্তমান UI থেকে নেওয়া দৃশ্যমান ধরন।",
+      "html": "<button class=\"ds-listen\">আবার শোনো</button>",
+      "css": ".ds-listen{font-family:Baloo,Nunito,sans-serif;cursor:pointer;background:#ece3f8;color:#604094;border:0;border-radius:28px;padding:10px 21px;min-height:52px;font-size:17px;font-weight:700;transition:background .2s}.ds-listen:hover{background:#dfcff3}.ds-listen:focus-visible{outline:3px solid var(--purple,#7550ba);outline-offset:5px}"
+    },
+    {
+      "name": "Activity navigation",
+      "kind": "nav",
+      "refersTo": "navigation",
+      "description": "Activity navigation — বর্তমান UI থেকে নেওয়া দৃশ্যমান ধরন।",
+      "html": "<nav class=\"ds-nav\"><button aria-current=\"page\">চলো খেলি</button><button>রং শিখি</button></nav>",
+      "css": ".ds-nav{display:flex;gap:9px}.ds-nav button{font-family:Baloo,Nunito,sans-serif;cursor:pointer;padding:11px 24px;border:0;border-radius:30px;min-height:48px;background:transparent;color:var(--muted,#716581);font-size:16px}.ds-nav button[aria-current=page]{background:#e5daf5;color:#563589;font-weight:700}.ds-nav button:hover{color:var(--purple-dark,#5e3b9f)}.ds-nav button:focus-visible{outline:3px solid var(--purple,#7550ba);outline-offset:5px}"
+    },
+    {
+      "name": "ভাষা নির্বাচন",
+      "kind": "chip",
+      "refersTo": "language",
+      "description": "ভাষা নির্বাচন — বর্তমান UI থেকে নেওয়া দৃশ্যমান ধরন।",
+      "html": "<div class=\"ds-language\" role=\"group\" aria-label=\"ভাষা\"><button aria-pressed=\"true\">বাংলা</button><button aria-pressed=\"false\">English</button></div>",
+      "css": ".ds-language{display:inline-flex;gap:3px;padding:4px;background:#e9e2f3;border-radius:14px}.ds-language button{font-family:Baloo,Nunito,sans-serif;cursor:pointer;background:transparent;border:0;border-radius:10px;padding:7px 15px;min-height:40px;min-width:70px;font-size:14px;color:#675878}.ds-language button[aria-pressed=true]{background:white;color:#54348d;box-shadow:0 2px 6px #4230600d;font-weight:700}.ds-language button:focus-visible{outline:3px solid var(--purple,#7550ba);outline-offset:5px}"
+    },
+    {
+      "name": "রঙের স্টিকার",
+      "kind": "custom",
+      "refersTo": "sticker",
+      "description": "রঙের স্টিকার — বর্তমান UI থেকে নেওয়া দৃশ্যমান ধরন।",
+      "html": "<button class=\"ds-sticker\" aria-label=\"নীল\"><span></span></button>",
+      "css": ".ds-sticker{font-family:Baloo,Nunito,sans-serif;cursor:pointer;display:block;position:relative;width:140px;aspect-ratio:1;background:#3783E6;border:0;border-radius:26%;box-shadow:0 8px 16px #30284414;transform:rotate(4deg);transition:transform .35s cubic-bezier(.16,1,.3,1)}.ds-sticker span{position:absolute;left:15%;right:15%;top:12%;height:3px;background:#ffffff38;border-radius:100%}.ds-sticker:hover{transform:rotate(0) translateY(-5px) scale(1.025)}.ds-sticker:active{transform:rotate(0) scale(.94)}.ds-sticker:focus-visible{outline:3px solid var(--purple,#7550ba);outline-offset:5px}"
+    },
+    {
+      "name": "পছন্দের radio",
+      "kind": "input",
+      "refersTo": "setting-option",
+      "description": "পছন্দের radio — বর্তমান UI থেকে নেওয়া দৃশ্যমান ধরন।",
+      "html": "<label class=\"ds-option\"><input type=\"radio\" name=\"ds-set\" checked><span>প্রথম ৪টি রং</span></label>",
+      "css": ".ds-option{position:relative;display:block;width:180px;font-family:Baloo,Nunito,sans-serif;cursor:pointer}.ds-option input{position:absolute;opacity:0}.ds-option span{display:flex;align-items:center;justify-content:center;min-height:49px;border:1px solid #ded5e9;border-radius:12px;font-size:15px}.ds-option input:checked+span{background:#ede3fa;border-color:var(--purple,#7550ba);color:#5a3598}.ds-option input:focus-visible+span{outline:3px solid var(--purple,#7550ba);outline-offset:3px}"
+    },
+    {
+      "name": "Settings switch",
+      "kind": "input",
+      "refersTo": "setting-toggle",
+      "description": "Settings switch — বর্তমান UI থেকে নেওয়া দৃশ্যমান ধরন।",
+      "html": "<label class=\"ds-toggle\">কম অ্যানিমেশন <input type=\"checkbox\" checked></label>",
+      "css": ".ds-toggle{display:flex;align-items:center;gap:15px;font-family:Baloo,Nunito,sans-serif;font-size:17px}.ds-toggle input{appearance:none;width:42px;height:25px;border-radius:20px;background:#d6cede;position:relative;cursor:pointer;transition:background .2s}.ds-toggle input:before{content:\"\";position:absolute;left:3px;top:3px;width:19px;height:19px;background:white;border-radius:50%;transition:transform .2s}.ds-toggle input:checked{background:var(--purple,#7550ba)}.ds-toggle input:checked:before{transform:translateX(17px)}.ds-toggle input:focus-visible{outline:3px solid var(--purple,#7550ba);outline-offset:5px}"
+    },
+    {
+      "name": "কাগজের পাতা",
+      "kind": "card",
+      "refersTo": "sheet",
+      "description": "কাগজের পাতা — বর্তমান UI থেকে নেওয়া দৃশ্যমান ধরন।",
+      "html": "<section class=\"ds-sheet\">রঙের খেলা</section>",
+      "css": ".ds-sheet{background:var(--paper,#fffefa);color:var(--ink,#302844);border-radius:32px;padding:36px;font-family:Baloo,Nunito,sans-serif;box-shadow:0 12px 50px #64527606}"
+    }
+  ],
+  "narrative": {
+    "northStar": "স্টিকার অ্যালবাম",
+    "overview": "স্টিকার অ্যালবামের মতো উষ্ণ সাদা পাতায় রঙের টুকরোগুলো প্রধান বিষয়। শান্ত ল্যাভেন্ডার পটভূমি, গাঢ় বরইরঙা লেখা এবং বেগুনি নিয়ন্ত্রণ শিশুকে শোনা ও স্পর্শ করার দিকে রাখে।\n\nবাংলা ও ইংরেজির জন্য নিজস্বভাবে রাখা Baloo Da 2 ও Nunito ব্যবহার হয়। রঙের স্টিকার, সামান্য কাত হওয়া ভঙ্গি এবং অর্জিত তারার মৃদু নড়াচড়া আনন্দ আনে; পৃষ্ঠাটি প্রশস্ত ও কম ঘন থাকে।",
+    "keyCharacteristics": [
+      "শান্ত কাগজের পটভূমিতে উজ্জ্বল শিক্ষণীয় রঙ।",
+      "গোলাকার অক্ষর, বড় স্পর্শযোগ্য স্টিকার।",
+      "একটি ভাষা নিয়ন্ত্রণে পুরো UI এবং শুধু নির্বাচিত ভাষার রঙের নামের অডিও।",
+      "সফলতায় স্টিকার ওঠে ও তারা জমে; ভুলে কোমল দুলুনি।"
+    ],
+    "rules": [
+      {
+        "name": "The Color-as-Content Rule",
+        "body": "উজ্জ্বল রঙের বড় ক্ষেত্র শিক্ষণীয় স্টিকারে রাখুন; চারপাশ শান্ত থাকুক।",
+        "section": "colors"
+      }
+    ],
+    "dos": [
+      "Do রঙের স্টিকারকে সবচেয়ে দৃশ্যমান উপাদান রাখুন।",
+      "Do বাংলা/ইংরেজি বদলালে লেখা, সংখ্যা ও রঙের নাম একসঙ্গে বদলান।",
+      "Do keyboard focus, ভুল/সঠিকের চিহ্ন এবং কম অ্যানিমেশন বজায় রাখুন।"
+    ],
+    "donts": [
+      "Don't নির্বাচিত ভাষার অডিওতে অন্য ভাষা বা বাক্য যোগ করুন।",
+      "Don't শুধু রঙ দিয়ে ভুল/সঠিক অবস্থা বোঝান; চিহ্ন ও লেখা রাখুন।",
+      "Don't বর্তমান CSS/SVG স্টিকারকে অপ্রয়োজনীয় raster ছবি দিয়ে প্রতিস্থাপন করুন।"
+    ]
+  }
+}

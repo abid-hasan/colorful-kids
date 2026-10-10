@@ -1,0 +1,9 @@
+node_modules/
+dist/
+.DS_Store
+.venv/
+.venv-voice/
+__pycache__/
+.impeccable/review/
+.env
+.env.*

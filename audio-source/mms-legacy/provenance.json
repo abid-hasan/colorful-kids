@@ -1,0 +1,204 @@
+{
+  "generator": "scripts/generate_audio.py",
+  "sources": {
+    "ben": {
+      "model": "facebook/mms-tts-ben",
+      "url": "https://huggingface.co/facebook/mms-tts-ben",
+      "revision": "0da99de6074c8829121cdabfbdba423af18e8e56",
+      "model_license": "CC-BY-NC-4.0"
+    },
+    "eng": {
+      "model": "facebook/mms-tts-eng",
+      "url": "https://huggingface.co/facebook/mms-tts-eng",
+      "revision": "c71de0fe7204c83f1c10820a7d696d0b450048ba",
+      "model_license": "CC-BY-NC-4.0"
+    }
+  },
+  "seed": 42,
+  "speaking_rate": 0.9,
+  "sample_rate": 16000,
+  "processing": "One color name per file; peak normalization to 0.78; 120ms leading and 200ms trailing silence; MP3 encoding",
+  "review_status": "Token and decoded-signal checks passed; human pronunciation review remains recommended",
+  "assets": {
+    "bn/red": {
+      "text": "লাল",
+      "language": "bn",
+      "file": "bn/red.mp3",
+      "duration_seconds": 1.04,
+      "decoded_peak": 0.78274,
+      "decoded_rms": 0.12134,
+      "sha256": "a59550e420b1f61f9869f54d0a79205b9ce279cf8335ad2b7ed3dfa9694e5add"
+    },
+    "bn/blue": {
+      "text": "নীল",
+      "language": "bn",
+      "file": "bn/blue.mp3",
+      "duration_seconds": 1.104,
+      "decoded_peak": 0.7818,
+      "decoded_rms": 0.12514,
+      "sha256": "29bb5115c7592adc63851baf2cfb71a6d40f5e46c3219e557e0c636088bc3a46"
+    },
+    "bn/yellow": {
+      "text": "হলুদ",
+      "language": "bn",
+      "file": "bn/yellow.mp3",
+      "duration_seconds": 1.168,
+      "decoded_peak": 0.7856,
+      "decoded_rms": 0.11453,
+      "sha256": "dacd6b7f4205447ac863774cd650db011434ee06969060ddb5f564ed8fe926b9"
+    },
+    "bn/green": {
+      "text": "সবুজ",
+      "language": "bn",
+      "file": "bn/green.mp3",
+      "duration_seconds": 1.312,
+      "decoded_peak": 0.78214,
+      "decoded_rms": 0.10385,
+      "sha256": "9cb878b493fbf4347ee2256b48dbd55d9c30d60c88ee7ddff50082ece1506283"
+    },
+    "bn/orange": {
+      "text": "কমলা",
+      "language": "bn",
+      "file": "bn/orange.mp3",
+      "duration_seconds": 1.184,
+      "decoded_peak": 0.78174,
+      "decoded_rms": 0.14284,
+      "sha256": "c489d915a9e7ab4bf259ba1b44cfedc698dbbd307b83a842f8f0218bbea34ff0"
+    },
+    "bn/purple": {
+      "text": "বেগুনি",
+      "language": "bn",
+      "file": "bn/purple.mp3",
+      "duration_seconds": 1.6,
+      "decoded_peak": 0.77788,
+      "decoded_rms": 0.10375,
+      "sha256": "006715de9d02ce4b6e872aec2489c530a192955b3f099abf80ac0f5d6c3f3a29"
+    },
+    "bn/pink": {
+      "text": "গোলাপি",
+      "language": "bn",
+      "file": "bn/pink.mp3",
+      "duration_seconds": 1.6,
+      "decoded_peak": 0.78762,
+      "decoded_rms": 0.12301,
+      "sha256": "0c46234526ca6edacbf6d68292531994eca9773a7e3a7e00fe4dd52d59e76585"
+    },
+    "bn/brown": {
+      "text": "বাদামি",
+      "language": "bn",
+      "file": "bn/brown.mp3",
+      "duration_seconds": 1.52,
+      "decoded_peak": 0.79036,
+      "decoded_rms": 0.08781,
+      "sha256": "a79a1ce39fec3c561e3c54319c97a8ce7768e9a5382f6bcd7e7c7fa4fba58ec4"
+    },
+    "bn/black": {
+      "text": "কালো",
+      "language": "bn",
+      "file": "bn/black.mp3",
+      "duration_seconds": 1.568,
+      "decoded_peak": 0.78391,
+      "decoded_rms": 0.09738,
+      "sha256": "822f31ff38ccd23eb3b80b6df57f88eeba1dd83deae681a09362b7265a732eb2"
+    },
+    "bn/white": {
+      "text": "সাদা",
+      "language": "bn",
+      "file": "bn/white.mp3",
+      "duration_seconds": 1.504,
+      "decoded_peak": 0.78192,
+      "decoded_rms": 0.06396,
+      "sha256": "13e201b14df84aae63c7eb9393407a5b0e62736b53206ea4e5cf265c3f1a055d"
+    },
+    "en/red": {
+      "text": "Red",
+      "language": "en",
+      "file": "en/red.mp3",
+      "duration_seconds": 0.976,
+      "decoded_peak": 0.77277,
+      "decoded_rms": 0.10781,
+      "sha256": "6343299b7e2b2cc2ddd1bfb8e38b6473bc586f0a23c317cb1a73a350aa4f9f72"
+    },
+    "en/blue": {
+      "text": "Blue",
+      "language": "en",
+      "file": "en/blue.mp3",
+      "duration_seconds": 1.088,
+      "decoded_peak": 0.78149,
+      "decoded_rms": 0.10343,
+      "sha256": "a4669fd386c66576262276d92a62ab09031ad3af461245da6bd63d68aeeb9592"
+    },
+    "en/yellow": {
+      "text": "Yellow",
+      "language": "en",
+      "file": "en/yellow.mp3",
+      "duration_seconds": 1.264,
+      "decoded_peak": 0.77179,
+      "decoded_rms": 0.1093,
+      "sha256": "fe10f5f52753e4db8b306bfed7c062078d344884d480daf5432f52327ea3cf9c"
+    },
+    "en/green": {
+      "text": "Green",
+      "language": "en",
+      "file": "en/green.mp3",
+      "duration_seconds": 1.696,
+      "decoded_peak": 0.78165,
+      "decoded_rms": 0.09103,
+      "sha256": "9346c96efe3d4998d5942e1634568c29a79c14d1393b0416cfbec37fb3b57dc3"
+    },
+    "en/orange": {
+      "text": "Orange",
+      "language": "en",
+      "file": "en/orange.mp3",
+      "duration_seconds": 1.584,
+      "decoded_peak": 0.77833,
+      "decoded_rms": 0.0742,
+      "sha256": "487537d6a197faa982845b3f4ad743c13d8ac4702a9408c65e575a40a49879d6"
+    },
+    "en/purple": {
+      "text": "Purple",
+      "language": "en",
+      "file": "en/purple.mp3",
+      "duration_seconds": 1.28,
+      "decoded_peak": 0.77812,
+      "decoded_rms": 0.07069,
+      "sha256": "e6557901c7897c41a263a3703f37d53a2f3a89fb4b697ad0b9d03c09e2dfd6f6"
+    },
+    "en/pink": {
+      "text": "Pink",
+      "language": "en",
+      "file": "en/pink.mp3",
+      "duration_seconds": 0.96,
+      "decoded_peak": 0.77968,
+      "decoded_rms": 0.06537,
+      "sha256": "a702f0796fe402c5d6d09650b85227bb8a3d072ed311e600124b384dcdb2d733"
+    },
+    "en/brown": {
+      "text": "Brown",
+      "language": "en",
+      "file": "en/brown.mp3",
+      "duration_seconds": 1.424,
+      "decoded_peak": 0.77859,
+      "decoded_rms": 0.05794,
+      "sha256": "b751a0a7d23cc27a8c75791025529cce1d45cc6fd943f7ae8f556fa1b8fb66b3"
+    },
+    "en/black": {
+      "text": "Black",
+      "language": "en",
+      "file": "en/black.mp3",
+      "duration_seconds": 1.392,
+      "decoded_peak": 0.77929,
+      "decoded_rms": 0.08401,
+      "sha256": "ce33edb622dab4575d0efbefed66c4b73217c49237c59fe5ad24a20cf1c2efa2"
+    },
+    "en/white": {
+      "text": "White",
+      "language": "en",
+      "file": "en/white.mp3",
+      "duration_seconds": 1.456,
+      "decoded_peak": 0.77695,
+      "decoded_rms": 0.07398,
+      "sha256": "75d699f3cc6c0dc43cfab6cc44bbea48e739a109946e6b6e118d31437191ac98"
+    }
+  }
+}

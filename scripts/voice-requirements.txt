@@ -1,0 +1,4 @@
+transformers==4.57.6
+torch==2.14.1
+scipy==1.18.1
+uroman==1.3.1.1
