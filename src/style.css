@@ -24,3 +24,6 @@
 .subject-door.subject-bn{background:var(--bn-paper)}
 .subject-door.subject-en{background:var(--en-paper)}
 .subject-door.subject-ar{background:var(--ar-paper)}
+
+/* Standalone Bengali marks use exact Baloo outlines without shaping placeholders. */
+.bangla-mark{display:block;width:48%;height:52%;overflow:visible}

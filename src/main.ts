@@ -1,4 +1,5 @@
 import './style.css';
+import banglaMarks from './bangla-marks.json';
 import { shuffle } from './colors';
 import { subjects, type Item, type SubjectId } from './curriculum';
 import { Sound } from './audio';
@@ -42,6 +43,11 @@ function persistSeen(item: Item) {
 function hasHeard(item: Item) { return !!seen[`${subjectId}:${subjectId === 'colors' ? language : ''}:${item.id}`]; }
 function logo() { return '<span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>'; }
 function glyph(item: Item) {
+  // Use the bundled font's outlines: standalone combining marks otherwise gain a dotted circle.
+  if (subjectId === 'bn' && Object.hasOwn(banglaMarks, item.symbol)) {
+    const mark = banglaMarks[item.symbol as keyof typeof banglaMarks];
+    return `<svg class="bangla-mark" viewBox="${mark.viewBox}" aria-hidden="true" focusable="false"><path fill="currentColor" transform="scale(1,-1)" d="${mark.path}"/></svg>`;
+  }
   if (item.hex) {
     const svg = `<svg xmlns="http://www.w3.org/2000/svg" width="160" height="160"><rect width="160" height="160" fill="${item.hex}"/></svg>`;
     return `<img class="color-face ${item.id === 'white' ? 'white-face' : ''}" src="data:image/svg+xml,${encodeURIComponent(svg)}" width="160" height="160" alt="" draggable="false">`;
