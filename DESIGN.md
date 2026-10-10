@@ -2,13 +2,13 @@
 name: "Colorful Kids"
 description: "রং ও তিন বর্ণমালার স্টিকার অ্যালবাম"
 colors:
-  purple: "#7550ba"
-  purple-dark: "#5e3b9f"
-  ink: "#302844"
-  muted: "#716581"
-  paper: "#fffefa"
-  ground: "#f4f0fb"
-  soft: "#ece3f8"
+  purple: "#176b68"
+  purple-dark: "#10534f"
+  ink: "#263c3a"
+  muted: "#626b62"
+  paper: "#fffef9"
+  ground: "#f7f3e8"
+  soft: "#e4ede5"
   white: "#ffffff"
   language-track: "#e9e2f3"
   listen-hover: "#dfcff3"
@@ -153,7 +153,7 @@ Game-এ desktop চারটি choice এক সারিতে, প্রত�
 
 ## Elevation & Depth
 
-Board ও tile মূলত tonal layering-এ পৃথক; স্থায়ী sheet বা primary-button shadow নেই। Subject entrance hover-এ 4px ওঠে এবং `0 10px 24px #30284412` ambient shadow পায়। Tile hover 5px, primary hover 2px ওঠে। রঙের entrance-এ তিনটি কাত করা স্ব্যাচের overlap অ্যালবামের material বজায় রাখে।
+Board ও tile মূলত tonal layering-এ পৃথক; স্থায়ী sheet বা primary-button shadow নেই। Subject entrance hover-এ 4px ওঠে এবং `0 10px 24px #263c3a12` ambient shadow পায়। Tile hover 5px, primary hover 2px ওঠে। রঙের entrance-এ তিনটি কাত করা স্ব্যাচের overlap অ্যালবামের material বজায় রাখে।
 
 ## Shapes
 
@@ -199,3 +199,41 @@ Replay, pause/resume এবং audio-error retry রয়েছে। Finish স�
 ### বর্তমান শেখা ও খেলার নিয়ম
 
 আগের ছোট দলের নিয়মের পরিবর্তে শেখায় পুরো বর্ণমালা এক তালিকায় থাকে। খেলায় পুরো বিষয় থেকে পাঁচটি আলাদা প্রশ্ন আসে; একই পেজ খোলা থাকা অবস্থায় পরের পর্বে আগে না-আসা প্রশ্ন অগ্রাধিকার পায়। প্রথম ভুলে চারটি অপশন একই জায়গায় থাকে: সঠিকটি সামান্য বড়, বর্ডার ও চেকসহ দেখা যায়, বাকিগুলো ম্লান হয়। সঠিকটিতে ট্যাপ করলে নাম আবার শোনা যায়। নামের পরে Next চালু হয়। ফলাফলে নিরপেক্ষ সমাপ্তির লেখা, স্বাধীন ও সহায়তাপ্রাপ্ত উত্তর আলাদা; feedback শুধুই সাউন্ড ইফেক্ট।
+
+
+## Current palette — October 2026
+
+Warm cream ground, ivory cards, dark botanical ink, deep teal actions. Bangla uses clay, English mist blue, Arabic pale olive. Primary actions use white on #176b68 (6.29:1). White learning swatches use #80887c borders. Learning color data stays unchanged. All UI color roles are CSS custom properties; do not restore purple action styling. Arabic cards size glyphs relative to card width and preserve lower dots. Removed group-controls, spoken-name and teaching-example styles must not return.
+
+- `--scroll-thumb`: `#899b91`
+- `--selection`: `#cce5da`
+- `--control-track`: `#e5e7db`
+- `--control-ink`: `#46594f`
+- `--soft-hover`: `#d2e3d6`
+- `--swatch-border`: `#80887c`
+- `--progress-empty`: `#818b7c`
+- `--star-stroke`: `#866419`
+- `--warm-ink`: `#975031`
+- `--bn-ink`: `#804428`
+- `--bn-paper`: `#f8e6d7`
+- `--en-ink`: `#315f79`
+- `--en-tile-ink`: `#315f79`
+- `--en-paper`: `#e6eff1`
+- `--ar-ink`: `#31664f`
+- `--ar-tile-ink`: `#285b47`
+- `--ar-paper`: `#e7eedb`
+- `--brand-red`: `#ec485a`
+- `--brand-yellow`: `#f6c842`
+- `--brand-blue`: `#3783e6`
+- `--brand-green`: `#36a972`
+- `--card-shadow`: `#263c3a12`
+- `--ground`: `#f7f3e8`
+- `--paper`: `#fffef9`
+- `--ink`: `#263c3a`
+- `--muted`: `#626b62`
+- `--action`: `#176b68`
+- `--action-hover`: `#10534f`
+- `--line`: `#d9dfd3`
+- `--soft`: `#e4ede5`
+- `--green`: `#24734b`
+- `--gold`: `#f2ca56`

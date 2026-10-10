@@ -27,3 +27,6 @@ FINISH: unreviewed and undocumented is unfinished; this build ends with the fini
 ### বর্তমান শেখা ও খেলার নিয়ম
 
 আগের ছোট দলের নিয়মের পরিবর্তে শেখায় পুরো বর্ণমালা এক তালিকায় থাকে। খেলায় পুরো বিষয় থেকে পাঁচটি আলাদা প্রশ্ন আসে; একই পেজ খোলা থাকা অবস্থায় পরের পর্বে আগে না-আসা প্রশ্ন অগ্রাধিকার পায়। প্রথম ভুলে চারটি অপশন একই জায়গায় থাকে: সঠিকটি সামান্য বড়, বর্ডার ও চেকসহ দেখা যায়, বাকিগুলো ম্লান হয়। সঠিকটিতে ট্যাপ করলে নাম আবার শোনা যায়। নামের পরে Next চালু হয়। ফলাফলে নিরপেক্ষ সমাপ্তির লেখা, স্বাধীন ও সহায়তাপ্রাপ্ত উত্তর আলাদা; feedback শুধুই সাউন্ড ইফেক্ট।
+
+
+Palette revision: cream ground, ivory cards, deep teal actions, clay/mist-blue/pale-olive subject accents. Preserve true learning colors. UI roles use semantic tokens; white swatches have a stronger neutral border.
