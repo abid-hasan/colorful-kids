@@ -33,7 +33,7 @@ const subject = () => subjects.find(s => s.id === subjectId)!;
 const pool = () => subject().items(language);
 const number = (n: number) => n.toLocaleString(language === 'bn' ? 'bn-BD' : 'en-US');
 const isNumbers = () => subjectId.startsWith('numbers-');
-const contentLanguage = () => subjectId === 'en-lower' ? 'en' : isNumbers() ? subjectId.slice(-2) : subjectId;
+const contentLanguage = () => subjectId === 'bn-consonants' ? 'bn' : subjectId === 'en-lower' ? 'en' : isNumbers() ? subjectId.slice(-2) : subjectId;
 const title = () => subject().title[language];
 const delay = (ms: number) => new Promise<void>(resolve => setTimeout(resolve, ms));
 const escape = (text: string) => text.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]!));
@@ -46,7 +46,7 @@ function hasHeard(item: Item) { return !!seen[`${subjectId}:${subjectId === 'col
 function logo() { return '<span class="logo-mark" aria-hidden="true"><i></i><i></i><i></i><i></i></span>'; }
 function glyph(item: Item) {
   // Use the bundled font's outlines: standalone combining marks otherwise gain a dotted circle.
-  if (subjectId === 'bn' && Object.hasOwn(banglaMarks, item.symbol)) {
+  if ((subjectId === 'bn' || subjectId === 'bn-consonants') && Object.hasOwn(banglaMarks, item.symbol)) {
     const mark = banglaMarks[item.symbol as keyof typeof banglaMarks];
     return `<svg class="bangla-mark" viewBox="${mark.viewBox}" aria-hidden="true" focusable="false"><path fill="currentColor" transform="scale(1,-1)" d="${mark.path}"/></svg>`;
   }
@@ -60,7 +60,7 @@ function header() {
   return `<header class="site-header"><button class="brand" data-action="home" aria-label="${t().home}">${logo()}<span lang="en">Colorful Kids</span></button><div class="language-switch" role="group" aria-label="${t().language}">${(['bn','en'] as const).map(l => `<button lang="${l}" data-action="language" data-value="${l}" aria-pressed="${language === l}">${l === 'bn' ? 'বাংলা' : 'English'}</button>`).join('')}</div></header>`;
 }
 function home() {
-  return `<section class="home"><h1>${t().pick}</h1><div class="subject-shelf">${subjects.map(s => `<button class="subject-door subject-${s.id}" data-action="subject" data-value="${s.id}"><span class="subject-art" aria-hidden="true">${s.id === 'colors' ? '<span class="color-stack"><i></i><i></i><i></i></span>' : `<span lang="${s.id === 'en-lower' ? 'en' : s.id.startsWith('numbers-') ? s.id.slice(-2) : s.id}" dir="${s.id === 'ar' ? 'rtl' : 'ltr'}">${s.sample}</span>`}</span><span class="subject-title">${s.title[language]}${icon('arrow')}</span></button>`).join('')}</div></section>`;
+  return `<section class="home"><h1>${t().pick}</h1><div class="subject-shelf">${subjects.map(s => `<button class="subject-door subject-${s.id}" data-action="subject" data-value="${s.id}"><span class="subject-art" aria-hidden="true">${s.id === 'colors' ? '<span class="color-stack"><i></i><i></i><i></i></span>' : `<span lang="${s.id === 'bn-consonants' ? 'bn' : s.id === 'en-lower' ? 'en' : s.id.startsWith('numbers-') ? s.id.slice(-2) : s.id}" dir="${s.id === 'ar' ? 'rtl' : 'ltr'}">${s.sample}</span>`}</span><span class="subject-title">${s.title[language]}${icon('arrow')}</span></button>`).join('')}</div></section>`;
 }
 function navigation() {
   return `<div class="activity-heading"><button class="icon-button" data-action="home" aria-label="${t().home}">${icon('back')}</button><h1>${title()}</h1><nav class="mode-tabs" aria-label="${title()}"><button data-action="learn" aria-current="${page === 'learn' ? 'page' : 'false'}">${icon('sound')}${t().learn}</button><button data-action="start" aria-current="${page !== 'learn' ? 'page' : 'false'}">${icon('play')}${t().play}</button></nav></div>`;
