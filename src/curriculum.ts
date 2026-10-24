@@ -9,12 +9,12 @@ export type Subject = { id: SubjectId; title: Record<Language, string>; sample: 
 const subjectCatalog: Subject[] = [
   { id: 'colors', title: { bn: 'রং', en: 'Colors' }, sample: '', items: language => colors.map(c => ({ id: c.id, symbol: '', spoken: c[language], hex: c.hex, audio: `audio/${language}/${c.id}.mp3?v=gero-20261010` })) },
   ...(['bn', 'en', 'ar'] as const).map(id => ({
-    id, title: { bn: id === 'bn' ? 'স্বরবর্ণ' : id === 'en' ? 'ইংরেজি বড় হাতের' : 'আরবি', en: id === 'bn' ? 'Bangla Vowels' : id === 'en' ? 'English Uppercase' : 'Arabic' },
+    id, title: { bn: id === 'bn' ? 'বাংলা স্বরবর্ণ' : id === 'en' ? 'ইংরেজি বড় হাতের' : 'আরবি', en: id === 'bn' ? 'Bangla Vowels' : id === 'en' ? 'English Uppercase' : 'Arabic' },
     sample: id === 'bn' ? 'অ আ' : id === 'en' ? 'A B' : 'ا ب',
     items: () => alphabetData[id].filter(e => id !== 'bn' || Number(e.id) <= 11).map(e => ({ ...e, audio: `audio/alphabets/${id}/${e.id}.mp3?v=8` })),
   })),
   {
-    id: 'bn-consonants', title: { bn: 'ব্যঞ্জনবর্ণ', en: 'Bangla Consonants' }, sample: 'ক খ',
+    id: 'bn-consonants', title: { bn: 'বাংলা ব্যঞ্জনবর্ণ', en: 'Bangla Consonants' }, sample: 'ক খ',
     items: () => alphabetData.bn.filter(e => Number(e.id) > 11).map(e => ({ ...e, audio: `audio/alphabets/bn/${e.id}.mp3?v=8` })),
   },
   {
