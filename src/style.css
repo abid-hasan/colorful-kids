@@ -61,3 +61,19 @@
 .subject-colors .color-stack i:nth-child(2){left:50px;top:8px}
 .subject-colors .color-stack i:nth-child(3){left:45px;top:47px}
 @media(max-width:750px){.subject-colors .color-stack{transform:scale(.85)}}
+
+/* Handwritten forms only for lowercase English learning glyphs. */
+@font-face{font-family:PlaypenLowercase;src:url('/fonts/playpen-sans-lowercase.woff2') format('woff2');font-weight:600;font-display:swap}
+.subject-door.subject-en-lower .subject-art,.subject-en-lower .letter{font-family:PlaypenLowercase,Nunito,sans-serif;font-weight:600}
+
+/* One palette per subject, shared by home, learning and quiz cards. */
+.subject-ar{--subject-paper:#deeee4;--subject-ink:#31664f}
+.subject-en{--subject-paper:#e2eef8;--subject-ink:#315f79}
+.subject-en-lower{--subject-paper:#f8e6d7;--subject-ink:#804428}
+.subject-numbers-en{--subject-paper:#f7edc9;--subject-ink:#796019}
+.subject-numbers-bn{--subject-paper:#f5e2e8;--subject-ink:#87465f}
+.subject-bn{--subject-paper:#eee4d2;--subject-ink:#715638}
+.subject-bn-consonants{--subject-paper:#e4e9d0;--subject-ink:#52642b}
+.subject-door:not(.subject-colors){background:var(--subject-paper)}
+.subject-door:not(.subject-colors) .subject-art{color:var(--subject-ink)}
+:is(.subject-ar,.subject-en,.subject-en-lower,.subject-numbers-en,.subject-numbers-bn,.subject-bn,.subject-bn-consonants) .learning-tile .tile-face{background:var(--subject-paper);color:var(--subject-ink)}
