@@ -292,6 +292,28 @@
       "sourcePeak": 0.84271,
       "sourceRms": 0.14847,
       "sha256": "2d59ecf1a6323e4b5aa9488b5209e97378adb164d3a298146c49bb9b4b1e8e79"
+    },
+    {
+      "language": "bn",
+      "id": "gray",
+      "text": "ধূসর",
+      "source": "audio-source/google-ai-studio/bn/gray.wav",
+      "file": "audio/bn/gray.mp3",
+      "generatedDate": "2026-10-24",
+      "durationSeconds": 1.48,
+      "sha256": "47f6661c37bbc3ac957666008453f5a58c5d6708d5409f77f58e53d0c947d5e3",
+      "generationDetails": "audio-source/google-ai-studio/gray-generation.json"
+    },
+    {
+      "language": "en",
+      "id": "gray",
+      "text": "Gray",
+      "source": "audio-source/google-ai-studio/en/gray.wav",
+      "file": "audio/en/gray.mp3",
+      "generatedDate": "2026-10-24",
+      "durationSeconds": 1.2,
+      "sha256": "11779839e3db5ef3e2bd5ff83ed1cf267c5956a68a6172cf5880421e32c4121a",
+      "generationDetails": "audio-source/google-ai-studio/gray-generation.json"
     }
   ]
 }

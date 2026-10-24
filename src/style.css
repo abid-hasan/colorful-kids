@@ -54,3 +54,10 @@
 
 .subject-door.subject-bn-consonants{background:#e4e9d0}
 .subject-door.subject-bn-consonants .subject-art{color:#52642b}
+
+/* Keep the entire rotated color illustration within its reserved space. */
+.subject-colors .color-stack{width:130px;height:120px;transform:none;flex-shrink:0}
+.subject-colors .color-stack i{width:70px;height:70px;left:8px;top:28px}
+.subject-colors .color-stack i:nth-child(2){left:50px;top:8px}
+.subject-colors .color-stack i:nth-child(3){left:45px;top:47px}
+@media(max-width:750px){.subject-colors .color-stack{transform:scale(.85)}}

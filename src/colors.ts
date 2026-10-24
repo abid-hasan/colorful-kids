@@ -9,6 +9,7 @@ export const colors: Color[] = [
   { id: 'pink', bn: 'গোলাপি', en: 'Pink', hex: '#EE8DB5', ink: '#5b2341' },
   { id: 'brown', bn: 'বাদামি', en: 'Brown', hex: '#935E3E', ink: '#fff' },
   { id: 'black', bn: 'কালো', en: 'Black', hex: '#303039', ink: '#fff' },
+  { id: 'gray', bn: 'ধূসর', en: 'Gray', hex: '#929292', ink: '#202020' },
   { id: 'white', bn: 'সাদা', en: 'White', hex: '#FFFFFF', ink: '#45404F' },
 ];
 export function shuffle<T>(items: T[]): T[] {
