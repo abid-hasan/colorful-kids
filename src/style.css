@@ -21,11 +21,12 @@
 .subject-ar .learning-tile .tile-face{container-type:inline-size}
 .subject-ar .learning-tile .letter[lang=ar]{font-size:clamp(32px,58cqi,88px);line-height:1.5;transform:translateY(-.06em)}
 
-.subject-door.subject-bn{background:var(--bn-paper)}
-.subject-door.subject-en{background:var(--en-paper)}
+.subject-door.subject-bn{background:#eee4d2}
+.subject-door.subject-bn .subject-art{color:#715638}
+.subject-door.subject-en{background:#e2eef8}
 .subject-door.subject-en-lower{background:var(--bn-paper)}
 .subject-door.subject-en-lower .subject-art{color:var(--bn-ink)}
-.subject-door.subject-ar{background:var(--ar-paper)}
+.subject-door.subject-ar{background:#deeee4}
 
 /* Standalone Bengali marks use exact Baloo outlines without shaping placeholders. */
 .bangla-mark{display:block;width:48%;height:52%;overflow:visible}
@@ -38,10 +39,10 @@
 .subject-title{font-size:23px}
 .color-stack{transform:scale(.58);transform-origin:center;width:250px;flex-shrink:0}
 .subject-colors .subject-art{overflow:hidden}
-.subject-door.subject-numbers-bn{background:var(--en-paper)}
-.subject-door.subject-numbers-en{background:var(--ar-paper)}
-.subject-numbers-bn .subject-art{color:var(--en-ink)}
-.subject-numbers-en .subject-art{color:var(--ar-ink);font-family:Nunito,sans-serif}
+.subject-door.subject-numbers-bn{background:#f5e2e8}
+.subject-door.subject-numbers-en{background:#f7edc9}
+.subject-numbers-bn .subject-art{color:#87465f}
+.subject-numbers-en .subject-art{color:#796019;font-family:Nunito,sans-serif}
 .subject-numbers-bn .tile-face{background:var(--bn-paper);color:var(--bn-ink);container-type:inline-size}
 .subject-numbers-en .tile-face{background:var(--en-paper);color:var(--en-tile-ink);container-type:inline-size}
 .learning-tile .number-glyph{font-size:clamp(30px,40cqi,66px);font-variant-numeric:tabular-nums;line-height:1.2}
